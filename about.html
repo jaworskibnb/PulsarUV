@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>About Us | Pulsar Medical</title>
+<meta name="description" content="Pulsar Medical was founded by industry veterans to bring medical-grade care to film and TV productions. 18 years of industry experience."/>
+<link rel="canonical" href="https://pulsarmedic.com/about.html"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared.css"/>
+
+<style>
+.story-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:start;max-width:1180px;margin:0 auto}
+.story-img{aspect-ratio:4/5;background:var(--ink-2);border-radius:2px;overflow:hidden;position:sticky;top:100px}
+.story-img img{width:100%;height:100%;object-fit:cover}
+.story-text h3{font-family:'Fraunces',serif;font-weight:500;font-size:2rem;line-height:1.2;margin-bottom:16px}
+.story-text h3 em{font-style:italic;color:var(--pulse)}
+.story-text p{color:var(--muted);font-size:1.05rem;line-height:1.8;margin-bottom:20px}
+.story-text p strong{color:var(--ink);font-weight:600}
+.story-meta{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin:40px 0;padding:32px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.story-meta-item .label{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:8px}
+.story-meta-item .value{font-family:'Fraunces',serif;font-size:1.4rem;color:var(--ink)}
+
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:1180px;margin:0 auto}
+.value-card{padding:40px 32px;background:var(--paper);border:1px solid var(--line);border-radius:2px;transition:border-color .3s,transform .3s}
+.value-card:hover{border-color:var(--pulse);transform:translateY(-4px)}
+.value-num{font-family:'Fraunces',serif;font-style:italic;font-size:3rem;color:var(--pulse);line-height:1;margin-bottom:20px;font-weight:500}
+.value-card h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.4rem;line-height:1.2;margin-bottom:14px}
+.value-card p{color:var(--muted);font-size:.98rem;line-height:1.7}
+
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:1180px;margin:0 auto}
+.team-card{text-align:center}
+.team-img{aspect-ratio:4/5;background:var(--ink-2);border-radius:2px;overflow:hidden;margin-bottom:20px;position:relative}
+.team-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.team-card:hover .team-img img{transform:scale(1.03)}
+.team-card h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.25rem;margin-bottom:6px}
+.team-role{font-size:.85rem;color:var(--pulse);letter-spacing:.08em;text-transform:uppercase;font-weight:600;margin-bottom:10px}
+.team-bio{font-size:.92rem;color:var(--muted);line-height:1.65;max-width:320px;margin:0 auto}
+
+.stats-row{background:var(--ink);color:var(--paper);padding:80px 40px}
+.stats-row-inner{max-width:1080px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:40px;text-align:center}
+.stat-big{font-family:'Fraunces',serif;font-weight:500;font-size:3rem;color:var(--pulse);line-height:1;margin-bottom:12px}
+.stat-big-label{font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(250,250,247,.6)}
+
+@media(max-width:900px){
+  .story-grid{grid-template-columns:1fr;gap:40px}
+  .story-img{position:static;max-width:500px;margin:0 auto}
+  .values-grid,.team-grid{grid-template-columns:1fr}
+  .stats-row-inner{grid-template-columns:1fr 1fr;gap:32px}
+  .story-meta{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="announce">24/7 response &bull; Licensed physician oversight &bull; <strong>Call (647) 696-8800</strong></div>
+
+<nav>
+  <a href="index.html" class="logo"><img src="images/logo.png" alt="Pulsar Medical"/></a>
+  <div class="nav-center">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="news.html">News</a>
+    <a href="about.html" class="active">About Us</a>
+  </div>
+  <a href="contact.html" class="nav-cta">Contact Us</a>
+  <button class="hamburger" onclick="document.querySelector('.nav-center').classList.toggle('open')"><span></span><span></span><span></span></button>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a> &mdash; About Us</div>
+    <div class="eyebrow">About Pulsar Medical</div>
+    <h1>Built by industry insiders. <em>For industry insiders.</em></h1>
+    <p>Pulsar Medical was founded by filmmakers who recognized the gap between standard medical services and the specific, high-pressure demands of working on set. We brought medical-grade care into the film industry &mdash; without disrupting the flow of production.</p>
+  </div>
+</section>
+
+<!-- Story -->
+<section>
+  <div class="story-grid">
+    <div class="story-img"><img src="images/about-1.jpg" alt="Pulsar Medical team"/></div>
+    <div class="story-text">
+      <div class="eyebrow">Our Story</div>
+      <h3>Film-industry veterans who became <em>medical professionals.</em></h3>
+      <p>Pulsar Medical provides set-savvy medical professionals to film and TV productions all across Ontario. We understand the pace of production because we come from the industry &mdash; and we know the difference between medical support that slows a set down and medical support that keeps it moving.</p>
+      <p>Since 2020, we've been committed to delivering reliable, professional on-site medical care that doesn't just respond to emergencies, but actively helps productions stay compliant with health and safety regulations. No shutdowns. No missed calls. No surprises.</p>
+      <p><strong>At Pulsar Medical, we bring peace of mind to every shoot &mdash; because safety should never be left to chance.</strong></p>
+      <div class="story-meta">
+        <div class="story-meta-item">
+          <div class="label">Founded</div>
+          <div class="value">2020</div>
+        </div>
+        <div class="story-meta-item">
+          <div class="label">Industry Experience</div>
+          <div class="value">18 Years</div>
+        </div>
+        <div class="story-meta-item">
+          <div class="label">Coverage Area</div>
+          <div class="value">All of Ontario</div>
+        </div>
+        <div class="story-meta-item">
+          <div class="label">Availability</div>
+          <div class="value">24/7 Response</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="stats-row">
+  <div class="stats-row-inner">
+    <div><div class="stat-big">18+</div><div class="stat-big-label">Years Experience</div></div>
+    <div><div class="stat-big">100%</div><div class="stat-big-label">Licensed &amp; Insured</div></div>
+    <div><div class="stat-big">24/7</div><div class="stat-big-label">Response Time</div></div>
+    <div><div class="stat-big">0</div><div class="stat-big-label">Production Shutdowns</div></div>
+  </div>
+</section>
+
+<!-- Values -->
+<section>
+  <div class="container">
+    <div class="section-head center">
+      <div class="eyebrow">What We Stand For</div>
+      <h2>The Pulsar <em>standard.</em></h2>
+      <p>Three principles guide every production, every event, every shift.</p>
+    </div>
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-num">01</div>
+        <h3>Set-Savvy Response</h3>
+        <p>We know when to move in and when to hold back. Medical care that integrates with production rhythm &mdash; never fights it.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-num">02</div>
+        <h3>Licensed &amp; Credentialed</h3>
+        <p>Every team operates under licensed physician oversight. Every medic is certified. Full insurance, WSIB, and HIPAA compliance, always.</p>
+      </div>
+      <div class="value-card">
+        <div class="value-num">03</div>
+        <h3>Transparent Partnership</h3>
+        <p>Clear pricing, honest timelines, and direct communication. We're a partner in keeping your production safe &mdash; not a vendor you have to manage.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team -->
+<section style="background:var(--bone)">
+  <div class="container">
+    <div class="section-head center">
+      <div class="eyebrow">Our Team</div>
+      <h2>Meet the <em>founders.</em></h2>
+      <p>Film industry professionals with deep medical expertise.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-img"><img src="images/team-1.jpg" alt="Team member"/></div>
+        <h3>Team Member</h3>
+        <div class="team-role">Founder &amp; Medical Director</div>
+        <p class="team-bio">Licensed physician with extensive on-set experience across Canadian productions.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-img"><img src="images/team-2.jpg" alt="Team member"/></div>
+        <h3>Team Member</h3>
+        <div class="team-role">Co-Founder &amp; Operations</div>
+        <p class="team-bio">18+ years in film production. Bridges the gap between clinical expertise and set dynamics.</p>
+      </div>
+      <div class="team-card">
+        <div class="team-img"><img src="images/team-3.jpg" alt="Team member"/></div>
+        <h3>Team Member</h3>
+        <div class="team-role">Lead Medic &amp; Consultant</div>
+        <p class="team-bio">Certified first responder specializing in high-volume production support.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="cta-inner">
+    <div class="eyebrow" style="justify-content:center;color:var(--pulse)">Work With Us</div>
+    <h2>Ready to bring Pulsar <em>onto your set?</em></h2>
+    <p>Whether it's a one-day shoot or a full series, our team is ready.</p>
+    <div class="cta-actions">
+      <a href="tel:+16476968800" class="btn-pulse">Call (647) 696-8800</a>
+      <a href="contact.html" class="btn-ghost">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo"><img src="images/logo.png" alt="Pulsar Medical"/></a>
+      <p>Set-savvy medical professionals for film, TV, and live events across Ontario. 18 years of industry experience.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/pulsarfilmsolutions" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="https://www.linkedin.com/company/pulsaruv/" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://www.facebook.com/share/1CPwoWj11r/" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Film &amp; TV Medics</a></li><li><a href="services.html">Workplace &amp; Events</a></li><li><a href="services.html">Medical Consulting</a></li><li><a href="services.html">Physician Oversight</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="news.html">News &amp; Press</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+16476968800">(647) 696-8800</a></li><li><a href="mailto:info@pulsarmedic.com">info@pulsarmedic.com</a></li><li>Ontario, Canada</li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2026 Pulsar Medical. All rights reserved.</div>
+    <div>Licensed &bull; Insured &bull; WSIB-Covered</div>
+  </div>
+</footer>
+
+</body>
+</html>

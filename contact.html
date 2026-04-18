@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Contact Us | Pulsar Medical</title>
+<meta name="description" content="Request a set medic, get a quote, or ask a question. 24/7 response. Call (647) 696-8800 or email info@pulsarmedic.com."/>
+<link rel="canonical" href="https://pulsarmedic.com/contact.html"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared.css"/>
+
+<style>
+.contact-layout{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1.3fr;gap:80px;align-items:start}
+
+.contact-info h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.6rem;margin-bottom:20px}
+.contact-info>p{color:var(--muted);font-size:1rem;line-height:1.7;margin-bottom:40px}
+.contact-method{display:flex;gap:20px;padding:24px 0;border-bottom:1px solid var(--line)}
+.contact-method:last-of-type{border-bottom:none}
+.contact-method-icon{width:44px;height:44px;border-radius:50%;background:var(--ink);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.contact-method-icon svg{width:18px;height:18px;color:var(--pulse)}
+.contact-method-text{flex:1}
+.contact-method-text .label{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:6px}
+.contact-method-text .value{font-family:'Fraunces',serif;font-size:1.3rem;color:var(--ink);margin-bottom:4px}
+.contact-method-text .value a:hover{color:var(--pulse)}
+.contact-method-text .sub{font-size:.85rem;color:var(--muted)}
+
+.hours-block{margin-top:40px;padding:32px;background:var(--bone);border-left:3px solid var(--pulse);border-radius:2px}
+.hours-block h4{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;margin-bottom:12px}
+.hours-block p{font-size:.95rem;color:var(--muted);line-height:1.7}
+
+.contact-form{background:var(--paper);border:1px solid var(--line);padding:48px;border-radius:2px;position:sticky;top:100px}
+.contact-form h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.6rem;margin-bottom:8px}
+.contact-form .form-intro{color:var(--muted);font-size:.95rem;margin-bottom:32px;line-height:1.6}
+
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:18px}
+.form-group{margin-bottom:18px}
+.form-group label{display:block;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);margin-bottom:8px}
+.form-group label .req{color:var(--pulse)}
+.form-group input,.form-group select,.form-group textarea{width:100%;padding:14px 16px;border:1px solid var(--line);background:var(--paper);border-radius:2px;font-family:inherit;font-size:.95rem;color:var(--ink);transition:border-color .2s;outline:none}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--pulse)}
+.form-group textarea{resize:vertical;min-height:120px;font-family:inherit}
+.form-group select{cursor:pointer;background-image:url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M2 4l4 4 4-4z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center;appearance:none;padding-right:40px}
+.form-checkbox{display:flex;gap:12px;align-items:flex-start;margin-bottom:28px;font-size:.88rem;color:var(--muted);line-height:1.5}
+.form-checkbox input{margin-top:3px;flex-shrink:0;accent-color:var(--pulse)}
+.form-submit{width:100%;padding:18px;background:var(--ink);color:var(--paper);border:none;border-radius:2px;font-size:.9rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;transition:background .2s,transform .2s;font-family:inherit}
+.form-submit:hover{background:var(--pulse);transform:translateY(-1px)}
+
+.areas-section{background:var(--bone);padding:80px 40px}
+.areas-section h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.6rem;text-align:center;margin-bottom:16px}
+.areas-section p{text-align:center;color:var(--muted);margin-bottom:40px;max-width:560px;margin-left:auto;margin-right:auto}
+.areas-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;max-width:1080px;margin:0 auto}
+.area{padding:14px 20px;background:var(--paper);border:1px solid var(--line);border-radius:2px;text-align:center;font-size:.88rem;font-weight:500;transition:all .2s}
+.area:hover{border-color:var(--pulse);color:var(--pulse)}
+
+@media(max-width:1024px){
+  .contact-layout{grid-template-columns:1fr;gap:50px}
+  .contact-form{position:static}
+}
+@media(max-width:600px){
+  .contact-form{padding:28px}
+  .form-row{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="announce">24/7 response &bull; Licensed physician oversight &bull; <strong>Call (647) 696-8800</strong></div>
+
+<nav>
+  <a href="index.html" class="logo"><img src="images/logo.png" alt="Pulsar Medical"/></a>
+  <div class="nav-center">
+    <a href="index.html">Home</a>
+    <a href="services.html">Services</a>
+    <a href="news.html">News</a>
+    <a href="about.html">About Us</a>
+  </div>
+  <a href="contact.html" class="nav-cta" style="background:var(--pulse)">Contact Us</a>
+  <button class="hamburger" onclick="document.querySelector('.nav-center').classList.toggle('open')"><span></span><span></span><span></span></button>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a> &mdash; Contact</div>
+    <div class="eyebrow">Get in Touch</div>
+    <h1>Ready when <em>you are.</em></h1>
+    <p>Whether it's a pilot, a feature, or a one-day shoot, get in touch and we'll get back to you within the hour. For urgent last-minute bookings, call us directly.</p>
+  </div>
+</section>
+
+<section>
+  <div class="contact-layout">
+    <div class="contact-info">
+      <div class="eyebrow">Contact Details</div>
+      <h3>Talk to our team.</h3>
+      <p>We answer calls around the clock. For non-urgent inquiries, the form on this page is the fastest way to get a detailed quote.</p>
+
+      <div class="contact-method">
+        <div class="contact-method-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <div class="contact-method-text">
+          <div class="label">Phone &mdash; 24/7</div>
+          <div class="value"><a href="tel:+16476968800">(647) 696-8800</a></div>
+          <div class="sub">Direct line for urgent bookings</div>
+        </div>
+      </div>
+
+      <div class="contact-method">
+        <div class="contact-method-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div class="contact-method-text">
+          <div class="label">Email</div>
+          <div class="value"><a href="mailto:info@pulsarmedic.com">info@pulsarmedic.com</a></div>
+          <div class="sub">Response within 1 business hour</div>
+        </div>
+      </div>
+
+      <div class="contact-method">
+        <div class="contact-method-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
+        <div class="contact-method-text">
+          <div class="label">Service Area</div>
+          <div class="value">All of Ontario</div>
+          <div class="sub">Based in Ontario &bull; Serving productions province-wide</div>
+        </div>
+      </div>
+
+      <div class="hours-block">
+        <h4>24/7 Availability</h4>
+        <p>We answer calls day and night &mdash; overnight shoots, last-minute bookings, and emergency coverage are no problem. Our medics are ready to deploy with minimal notice.</p>
+      </div>
+    </div>
+
+    <form class="contact-form" onsubmit="event.preventDefault();alert('Thanks! We will get back to you shortly.');">
+      <div class="eyebrow">Request a Quote</div>
+      <h3>Tell us about your production.</h3>
+      <p class="form-intro">Fill out the form and our team will get back to you with availability and pricing within 1 business hour.</p>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>First Name <span class="req">*</span></label>
+          <input type="text" required placeholder="Jane"/>
+        </div>
+        <div class="form-group">
+          <label>Last Name <span class="req">*</span></label>
+          <input type="text" required placeholder="Doe"/>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Email <span class="req">*</span></label>
+          <input type="email" required placeholder="jane@production.com"/>
+        </div>
+        <div class="form-group">
+          <label>Phone</label>
+          <input type="tel" placeholder="(416) 555-0100"/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Production / Company</label>
+        <input type="text" placeholder="Production name"/>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Service Needed <span class="req">*</span></label>
+          <select required>
+            <option value="">Select a service</option>
+            <option>Film &amp; TV Set Medic</option>
+            <option>Workplace &amp; Events Medic</option>
+            <option>Medical Consulting</option>
+            <option>Specialty Extras</option>
+            <option>Other / Not sure</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Location</label>
+          <input type="text" placeholder="Toronto, ON"/>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>Start Date</label>
+          <input type="date"/>
+        </div>
+        <div class="form-group">
+          <label>End Date</label>
+          <input type="date"/>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Project Details</label>
+        <textarea placeholder="Tell us about the production, location, and any specific coverage needs..."></textarea>
+      </div>
+
+      <label class="form-checkbox">
+        <input type="checkbox"/>
+        <span>This is an urgent / last-minute booking &mdash; please prioritize.</span>
+      </label>
+
+      <button type="submit" class="form-submit">Send Request &rarr;</button>
+    </form>
+  </div>
+</section>
+
+<!-- Areas we serve -->
+<section class="areas-section">
+  <h3>Areas We Serve</h3>
+  <p>Productions and events across Ontario. No location is too remote.</p>
+  <div class="areas-grid">
+    <div class="area">Toronto</div>
+    <div class="area">Ottawa</div>
+    <div class="area">Kingston</div>
+    <div class="area">London</div>
+    <div class="area">North Bay</div>
+    <div class="area">Sudbury</div>
+    <div class="area">Mississauga</div>
+    <div class="area">Brampton</div>
+    <div class="area">Vaughan</div>
+    <div class="area">Markham</div>
+    <div class="area">Hamilton</div>
+    <div class="area">Kitchener</div>
+    <div class="area">Waterloo</div>
+    <div class="area">Niagara Falls</div>
+    <div class="area">Barrie</div>
+    <div class="area">Thunder Bay</div>
+    <div class="area">Sault Ste. Marie</div>
+    <div class="area">Peterborough</div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo"><img src="images/logo.png" alt="Pulsar Medical"/></a>
+      <p>Set-savvy medical professionals for film, TV, and live events across Ontario. 18 years of industry experience.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/pulsarfilmsolutions" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="https://www.linkedin.com/company/pulsaruv/" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://www.facebook.com/share/1CPwoWj11r/" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Film &amp; TV Medics</a></li><li><a href="services.html">Workplace &amp; Events</a></li><li><a href="services.html">Medical Consulting</a></li><li><a href="services.html">Physician Oversight</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="news.html">News &amp; Press</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+16476968800">(647) 696-8800</a></li><li><a href="mailto:info@pulsarmedic.com">info@pulsarmedic.com</a></li><li>Ontario, Canada</li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2026 Pulsar Medical. All rights reserved.</div>
+    <div>Licensed &bull; Insured &bull; WSIB-Covered</div>
+  </div>
+</footer>
+
+</body>
+</html>

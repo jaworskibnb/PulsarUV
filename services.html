@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Services | Pulsar Medical</title>
+<meta name="description" content="Set medics, medical consulting, event medics, and workplace medical services. Licensed, insured, and built for the pace of production."/>
+<meta name="keywords" content="set medic services, film medic, event medical, workplace medics Ontario, medical consulting film"/>
+<link rel="canonical" href="https://pulsarmedic.com/services.html"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="shared.css"/>
+
+<style>
+/* Services-specific styles */
+.services-list{display:grid;gap:0;max-width:1080px;margin:0 auto}
+.service-row{display:grid;grid-template-columns:.8fr 1.5fr 1fr;gap:60px;padding:60px 0;border-top:1px solid var(--line);align-items:start}
+.service-row:last-child{border-bottom:1px solid var(--line)}
+.service-row .num{font-family:'Fraunces',serif;font-style:italic;color:var(--pulse);font-size:1rem;letter-spacing:.1em}
+.service-row h3{font-family:'Fraunces',serif;font-weight:500;font-size:2rem;line-height:1.1;letter-spacing:-.01em;margin-bottom:16px}
+.service-row p{color:var(--muted);font-size:1rem;line-height:1.7;margin-bottom:20px}
+.service-row ul{list-style:none}
+.service-row ul li{padding:10px 0;border-bottom:1px solid var(--line);font-size:.92rem;display:flex;gap:12px}
+.service-row ul li::before{content:'→';color:var(--pulse);font-weight:600}
+.service-row ul li:last-child{border-bottom:none}
+
+.divisions{background:var(--bone)}
+.division-tabs{display:flex;justify-content:center;gap:8px;margin-bottom:60px;flex-wrap:wrap}
+.division-tab{padding:14px 28px;background:var(--paper);border:1px solid var(--line);border-radius:2px;font-size:.88rem;font-weight:600;letter-spacing:.05em;transition:all .2s}
+.division-tab.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.division-tab:hover:not(.active){border-color:var(--pulse);color:var(--pulse)}
+
+.division-card{background:var(--paper);border:1px solid var(--line);border-radius:2px;padding:60px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1100px;margin:0 auto}
+.division-card h3{font-family:'Fraunces',serif;font-weight:500;font-size:2.4rem;line-height:1.1;margin-bottom:20px}
+.division-card h3 em{font-style:italic;color:var(--pulse)}
+.division-card p{color:var(--muted);font-size:1.02rem;line-height:1.7;margin-bottom:28px}
+.division-features{list-style:none}
+.division-features li{padding:14px 0;border-bottom:1px solid var(--line);font-size:.95rem;display:flex;align-items:flex-start;gap:14px}
+.division-features li:last-child{border-bottom:none}
+.division-features li::before{content:'';width:6px;height:6px;background:var(--pulse);border-radius:50%;flex-shrink:0;margin-top:8px}
+.division-img{aspect-ratio:4/5;background:var(--ink-2);border-radius:2px;overflow:hidden}
+.division-img img{width:100%;height:100%;object-fit:cover}
+
+@media(max-width:900px){
+  .service-row{grid-template-columns:1fr;gap:20px}
+  .division-card{grid-template-columns:1fr;padding:32px;gap:32px}
+}
+</style>
+</head>
+<body>
+
+<div class="announce">24/7 response &bull; Licensed physician oversight &bull; <strong>Call (647) 696-8800</strong></div>
+
+<nav>
+  <a href="index.html" class="logo"><img src="images/logo.png" alt="Pulsar Medical"/></a>
+  <div class="nav-center">
+    <a href="index.html">Home</a>
+    <a href="services.html" class="active">Services</a>
+    <a href="news.html">News</a>
+    <a href="about.html">About Us</a>
+  </div>
+  <a href="contact.html" class="nav-cta">Contact Us</a>
+  <button class="hamburger" onclick="document.querySelector('.nav-center').classList.toggle('open')"><span></span><span></span><span></span></button>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="breadcrumb"><a href="index.html">Home</a> &mdash; Services</div>
+    <div class="eyebrow">What We Do</div>
+    <h1>Medical expertise built for <em>production and performance.</em></h1>
+    <p>From feature films to festivals, we provide certified medical professionals, specialty extras, and consulting services that keep productions running safely and on schedule.</p>
+  </div>
+</section>
+
+<!-- Divisions -->
+<section class="divisions">
+  <div class="container">
+    <div class="section-head center">
+      <div class="eyebrow">Our Divisions</div>
+      <h2>Two focused <em>divisions.</em></h2>
+      <p>Each with deep industry expertise and the same uncompromising standard of care.</p>
+    </div>
+
+    <div class="division-card" style="margin-bottom:32px">
+      <div>
+        <div class="eyebrow">Division 01</div>
+        <h3>Film &amp; <em>TV Productions</em></h3>
+        <p>Pulsar Medical is a trusted provider of experienced set medics for film and television productions. With 18 years of industry film experience, we understand the unique pace and demands of production environments.</p>
+        <p>Since 2020, we've delivered reliable, professional on-site medical support that ensures immediate care when it's needed most and helps productions remain compliant with health and safety regulations.</p>
+        <ul class="division-features">
+          <li>Licensed physician oversight on every production</li>
+          <li>Set-savvy medics who understand production flow</li>
+          <li>Specialized medical consultants on call</li>
+          <li>Full compliance with health &amp; safety regulations</li>
+          <li>Fully-stocked medical kits (AED, EpiPen, Narcan)</li>
+          <li>24/7 availability, including last-minute bookings</li>
+        </ul>
+      </div>
+      <div class="division-img"><img src="images/services-film.jpg" alt="Film set medic"/></div>
+    </div>
+
+    <div class="division-card">
+      <div class="division-img"><img src="images/services-events.jpg" alt="Event medic"/></div>
+      <div>
+        <div class="eyebrow">Division 02</div>
+        <h3>Workplace &amp; <em>Events</em></h3>
+        <p>Pulsar Medical provides professional on-site medics for concerts, festivals, corporate events, and workplace needs. We ensure the safety and well-being of attendees, performers, and crew in every environment.</p>
+        <p>Whether it's a music festival, a corporate function, or ongoing workplace medical support, our team brings the same level of preparation and responsiveness that productions rely on.</p>
+        <ul class="division-features">
+          <li>Event &amp; concert medical teams</li>
+          <li>Festival and crowd response specialists</li>
+          <li>Corporate workplace medical support</li>
+          <li>Medical consulting and safety planning</li>
+          <li>Scalable team sizes for any event</li>
+          <li>Full WSIB and insurance coverage</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Detailed services list -->
+<section>
+  <div class="container">
+    <div class="section-head center">
+      <div class="eyebrow">Full Scope</div>
+      <h2>Every service <em>we offer.</em></h2>
+    </div>
+
+    <div class="services-list">
+      <div class="service-row">
+        <div class="num">— 01</div>
+        <div>
+          <h3>Set Medics</h3>
+          <p>Certified medical first responders with first-hand film &amp; TV experience. We blend seamlessly into the production environment without disrupting flow.</p>
+        </div>
+        <ul>
+          <li>Day rate or full production</li>
+          <li>Multi-unit coverage available</li>
+          <li>Night shoots &amp; overnight</li>
+          <li>Remote location shoots</li>
+        </ul>
+      </div>
+
+      <div class="service-row">
+        <div class="num">— 02</div>
+        <div>
+          <h3>Physician Oversight</h3>
+          <p>Every team operates under the supervision of a licensed physician. Escalation and specialist access when cases go beyond standard first response.</p>
+        </div>
+        <ul>
+          <li>Medical direction</li>
+          <li>Protocol review</li>
+          <li>Specialist referrals</li>
+          <li>Case documentation</li>
+        </ul>
+      </div>
+
+      <div class="service-row">
+        <div class="num">— 03</div>
+        <div>
+          <h3>Medical Consulting</h3>
+          <p>Pre-production medical planning, compliance review, and location-specific risk assessment. Technical advisory for medical accuracy in scripts and scenes.</p>
+        </div>
+        <ul>
+          <li>Health &amp; safety planning</li>
+          <li>Production risk assessment</li>
+          <li>Script medical accuracy</li>
+          <li>Scene technical advisory</li>
+        </ul>
+      </div>
+
+      <div class="service-row">
+        <div class="num">— 04</div>
+        <div>
+          <h3>Specialty Extras</h3>
+          <p>Need authentic medical personnel for a hospital scene or emergency sequence? We provide actual certified medics for on-camera background and non-speaking roles.</p>
+        </div>
+        <ul>
+          <li>Background medical personnel</li>
+          <li>Hospital scene extras</li>
+          <li>Emergency sequence coordination</li>
+          <li>Wardrobe &amp; gear accurate</li>
+        </ul>
+      </div>
+
+      <div class="service-row">
+        <div class="num">— 05</div>
+        <div>
+          <h3>Event &amp; Festival Medics</h3>
+          <p>Scalable medical coverage for concerts, festivals, corporate events, and public gatherings. From single medic to full response team.</p>
+        </div>
+        <ul>
+          <li>Concerts &amp; festivals</li>
+          <li>Corporate events</li>
+          <li>Film premieres &amp; junkets</li>
+          <li>Convention &amp; trade shows</li>
+        </ul>
+      </div>
+
+      <div class="service-row">
+        <div class="num">— 06</div>
+        <div>
+          <h3>Workplace Medical Support</h3>
+          <p>Ongoing or project-based medical support for workplaces, including industrial sets, stunt-heavy productions, and long-running studio shoots.</p>
+        </div>
+        <ul>
+          <li>Ongoing workplace coverage</li>
+          <li>Stunt-heavy productions</li>
+          <li>Industrial set support</li>
+          <li>Compliance documentation</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <div class="cta-inner">
+    <div class="eyebrow" style="justify-content:center;color:var(--pulse)">Get Started</div>
+    <h2>Have a production <em>or event coming up?</em></h2>
+    <p>We're available 24/7. Tell us about your dates, locations, and coverage needs and we'll get back to you fast.</p>
+    <div class="cta-actions">
+      <a href="tel:+16476968800" class="btn-pulse">Call (647) 696-8800</a>
+      <a href="contact.html" class="btn-ghost">Request a Quote</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo"><img src="images/logo.png" alt="Pulsar Medical"/></a>
+      <p>Set-savvy medical professionals for film, TV, and live events across Ontario. 18 years of industry experience.</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/pulsarfilmsolutions" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="https://www.linkedin.com/company/pulsaruv/" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="https://www.facebook.com/share/1CPwoWj11r/" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      </div>
+    </div>
+    <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Film &amp; TV Medics</a></li><li><a href="services.html">Workplace &amp; Events</a></li><li><a href="services.html">Medical Consulting</a></li><li><a href="services.html">Physician Oversight</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="news.html">News &amp; Press</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+16476968800">(647) 696-8800</a></li><li><a href="mailto:info@pulsarmedic.com">info@pulsarmedic.com</a></li><li>Ontario, Canada</li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <div>&copy; 2026 Pulsar Medical. All rights reserved.</div>
+    <div>Licensed &bull; Insured &bull; WSIB-Covered</div>
+  </div>
+</footer>
+
+</body>
+</html>
