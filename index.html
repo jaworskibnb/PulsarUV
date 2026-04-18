@@ -3,583 +3,1486 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Pulsar Medical | Set Medics &amp; Consulting for Film &amp; TV</title>
-<meta name="description" content="Pulsar Medical provides set-savvy medical professionals to film and TV productions across Ontario. 18 years of film production experience. Licensed physician oversight."/>
-<meta name="keywords" content="set medic, film medic, TV production medic, on-set medical, Ontario film industry, Toronto set medic, production safety, medical consulting film"/>
-<link rel="canonical" href="https://pulsarmedic.com/"/>
-
-<meta property="og:type" content="website"/>
-<meta property="og:title" content="Pulsar Medical | Set Medics &amp; Consulting for Film &amp; TV"/>
-<meta property="og:description" content="Set-savvy medical professionals for film and TV productions across Ontario."/>
-<meta property="og:image" content="images/about-1.jpg"/>
+<title>Pulsar Medical | Professional Medical Staffing for Productions &amp; Events</title>
+<meta name="description" content="Licensed medical professionals for film &amp; TV productions, live events, and workplace environments across Ontario. Physician-directed. 24/7 response. Fully insured."/>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 
 <style>
 :root{
-  --ink:#0d1117;
-  --ink-2:#1a1f28;
-  --paper:#fafaf7;
-  --bone:#f1efe9;
-  --pulse:#d94141;
-  --pulse-deep:#a82828;
-  --sage:#3d5948;
-  --muted:#6b6d74;
-  --line:#e4e2db;
+  --navy:#0a2540;
+  --navy-dark:#051630;
+  --navy-light:#1d3a5f;
+  --blue:#2563eb;
+  --blue-hover:#1d4ed8;
+  --blue-soft:#eff6ff;
+  --blue-border:#bfdbfe;
+  --text:#0f172a;
+  --text-muted:#475569;
+  --text-light:#64748b;
+  --gray-50:#f8fafc;
+  --gray-100:#f1f5f9;
+  --gray-200:#e2e8f0;
+  --gray-300:#cbd5e1;
+  --white:#ffffff;
+  --green:#059669;
+  --radius:8px;
+  --radius-lg:12px;
 }
-*{margin:0;padding:0;box-sizing:border-box}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{font-family:'Archivo',sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+body{
+  font-family:'Manrope',-apple-system,BlinkMacSystemFont,sans-serif;
+  color:var(--text);
+  background:var(--white);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  font-weight:400;
+}
 a{color:inherit;text-decoration:none}
 img{max-width:100%;display:block}
 
-/* Announcement bar */
-.announce{background:var(--ink);color:var(--paper);padding:10px 24px;text-align:center;font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;font-weight:500}
-.announce strong{color:var(--pulse);font-weight:600}
+/* ============================================
+   TOP BAR - Phone/contact info
+   ============================================ */
+.top-bar{
+  background:var(--navy);
+  color:var(--white);
+  padding:10px 0;
+  font-size:13px;
+}
+.top-bar-inner{
+  max-width:1280px;
+  margin:0 auto;
+  padding:0 24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:12px;
+}
+.top-bar-left{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.top-bar-item{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,.85)}
+.top-bar-item svg{width:14px;height:14px;color:rgba(255,255,255,.7)}
+.top-bar-item a{color:var(--white);font-weight:600}
+.top-bar-item a:hover{text-decoration:underline}
+.status-dot{width:8px;height:8px;border-radius:50%;background:#10b981;box-shadow:0 0 0 3px rgba(16,185,129,.2);animation:pulse-status 2s infinite}
+@keyframes pulse-status{0%,100%{box-shadow:0 0 0 3px rgba(16,185,129,.2)}50%{box-shadow:0 0 0 6px rgba(16,185,129,.1)}}
 
-/* Nav */
-nav{position:sticky;top:0;background:rgba(250,250,247,.95);backdrop-filter:blur(12px);z-index:100;border-bottom:1px solid var(--line);padding:16px 40px;display:flex;align-items:center;justify-content:space-between}
-.logo{display:flex;align-items:center;gap:10px}
-.logo img{height:42px;width:auto}
-.logo-text{font-family:'Fraunces',serif;font-weight:600;font-size:1.15rem;letter-spacing:-.02em}
-.nav-center{display:flex;gap:36px;align-items:center}
-.nav-center a{font-size:.85rem;font-weight:500;color:var(--ink-2);transition:color .2s;position:relative}
-.nav-center a:hover{color:var(--pulse)}
-.nav-center a.active{color:var(--pulse)}
-.nav-center a.active::after{content:'';position:absolute;bottom:-22px;left:0;right:0;height:2px;background:var(--pulse)}
-.nav-cta{background:var(--ink);color:var(--paper);padding:11px 24px;border-radius:2px;font-size:.82rem;font-weight:600;letter-spacing:.02em;transition:background .2s}
-.nav-cta:hover{background:var(--pulse)}
-.hamburger{display:none;background:none;border:none;cursor:pointer;padding:4px}
-.hamburger span{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;transition:.3s}
+/* ============================================
+   NAVIGATION
+   ============================================ */
+header{
+  background:var(--white);
+  border-bottom:1px solid var(--gray-200);
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow:0 1px 0 rgba(0,0,0,.02);
+}
+.nav-inner{
+  max-width:1280px;
+  margin:0 auto;
+  padding:20px 24px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:40px;
+}
+.logo{display:flex;align-items:center;gap:12px}
+.logo-mark{
+  width:44px;
+  height:44px;
+  background:var(--navy);
+  border-radius:var(--radius);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--white);
+  font-weight:800;
+  font-size:18px;
+  letter-spacing:-.02em;
+}
+.logo-text{
+  font-weight:700;
+  font-size:20px;
+  color:var(--navy);
+  letter-spacing:-.02em;
+  line-height:1.1;
+}
+.logo-text span{display:block;font-size:11px;font-weight:500;color:var(--text-muted);letter-spacing:.02em;margin-top:2px}
 
-/* Hero */
-.hero{position:relative;padding:90px 40px 100px;overflow:hidden;background:var(--paper)}
-.hero::before{content:'';position:absolute;top:0;right:0;width:50%;height:100%;background:var(--bone);z-index:0}
-.hero-inner{position:relative;z-index:1;max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.2fr 1fr;gap:80px;align-items:center}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--pulse);font-weight:600;margin-bottom:28px}
-.hero-eyebrow::before{content:'';display:block;width:32px;height:1px;background:var(--pulse)}
-.hero h1{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(2.6rem,5.5vw,4.8rem);line-height:1.05;letter-spacing:-.02em;margin-bottom:24px;color:var(--ink)}
-.hero h1 em{font-style:italic;color:var(--pulse);font-weight:500}
-.hero-sub{font-size:1.15rem;color:var(--muted);max-width:520px;margin-bottom:42px;line-height:1.65}
-.hero-stats{display:flex;gap:50px;margin-bottom:42px;padding-top:32px;border-top:1px solid var(--line)}
-.hero-stat .num{font-family:'Fraunces',serif;font-size:2.2rem;font-weight:600;color:var(--ink);line-height:1}
-.hero-stat .lbl{font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;color:var(--muted);margin-top:6px}
-.hero-cta-row{display:flex;gap:14px;flex-wrap:wrap}
-.btn-primary{background:var(--ink);color:var(--paper);padding:16px 32px;border-radius:2px;font-size:.9rem;font-weight:600;letter-spacing:.04em;transition:background .2s,transform .2s;display:inline-flex;align-items:center;gap:10px}
-.btn-primary:hover{background:var(--pulse);transform:translateY(-1px)}
-.btn-primary svg{width:14px;height:14px}
-.btn-secondary{color:var(--ink);padding:16px 32px;border:1px solid var(--ink);border-radius:2px;font-size:.9rem;font-weight:600;letter-spacing:.04em;transition:all .2s}
-.btn-secondary:hover{background:var(--ink);color:var(--paper)}
+.nav-links{display:flex;gap:8px;align-items:center}
+.nav-links>a{
+  padding:10px 16px;
+  font-size:15px;
+  font-weight:600;
+  color:var(--text);
+  border-radius:var(--radius);
+  transition:all .15s;
+}
+.nav-links>a:hover{background:var(--gray-100);color:var(--navy)}
+.nav-links>a.active{color:var(--blue)}
 
-.hero-visual{position:relative;aspect-ratio:4/5;background:var(--ink-2);border-radius:2px;overflow:hidden}
-.hero-visual img{width:100%;height:100%;object-fit:cover}
-.hero-visual::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(13,17,23,.6))}
-.hero-card{position:absolute;bottom:24px;left:24px;right:24px;background:rgba(250,250,247,.96);backdrop-filter:blur(10px);padding:20px 24px;border-radius:2px;z-index:2;display:flex;gap:16px;align-items:center}
-.hero-card-dot{width:10px;height:10px;border-radius:50%;background:var(--pulse);flex-shrink:0;animation:pulse 2s infinite}
-@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.3)}}
-.hero-card-text{font-size:.82rem;line-height:1.4}
-.hero-card-text strong{display:block;color:var(--ink);font-weight:600;margin-bottom:2px}
-.hero-card-text span{color:var(--muted)}
+.nav-cta-group{display:flex;gap:12px;align-items:center}
+.btn-phone{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:15px;
+  font-weight:700;
+  color:var(--navy);
+  padding:10px 14px;
+}
+.btn-phone svg{width:16px;height:16px}
+.btn-primary{
+  background:var(--blue);
+  color:var(--white);
+  padding:12px 24px;
+  border-radius:var(--radius);
+  font-size:15px;
+  font-weight:600;
+  transition:all .15s;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  border:none;
+  cursor:pointer;
+  font-family:inherit;
+}
+.btn-primary:hover{background:var(--blue-hover);transform:translateY(-1px);box-shadow:0 4px 12px rgba(37,99,235,.3)}
+.btn-primary svg{width:16px;height:16px}
+.btn-secondary{
+  background:var(--white);
+  color:var(--navy);
+  padding:12px 24px;
+  border-radius:var(--radius);
+  font-size:15px;
+  font-weight:600;
+  transition:all .15s;
+  border:1.5px solid var(--gray-300);
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  cursor:pointer;
+  font-family:inherit;
+}
+.btn-secondary:hover{border-color:var(--navy);background:var(--gray-50)}
+.btn-white{
+  background:var(--white);
+  color:var(--navy);
+  padding:14px 28px;
+  border-radius:var(--radius);
+  font-size:16px;
+  font-weight:600;
+  transition:all .15s;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+.btn-white:hover{background:var(--blue-soft);transform:translateY(-1px)}
+.btn-outline-white{
+  background:transparent;
+  color:var(--white);
+  padding:14px 28px;
+  border-radius:var(--radius);
+  font-size:16px;
+  font-weight:600;
+  border:1.5px solid rgba(255,255,255,.3);
+  transition:all .15s;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+}
+.btn-outline-white:hover{background:rgba(255,255,255,.1);border-color:var(--white)}
 
-/* Section basics */
-section{padding:110px 40px}
+.hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px}
+.hamburger span{display:block;width:22px;height:2px;background:var(--navy);margin:5px 0;border-radius:2px}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero{
+  background:linear-gradient(180deg,var(--gray-50) 0%,var(--white) 100%);
+  padding:80px 0 100px;
+  position:relative;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;
+  top:0;
+  right:0;
+  width:55%;
+  height:100%;
+  background-image:radial-gradient(circle at 30% 20%,rgba(37,99,235,.06) 0%,transparent 50%),
+                   radial-gradient(circle at 80% 80%,rgba(10,37,64,.04) 0%,transparent 50%);
+  pointer-events:none;
+}
+.hero-inner{
+  max-width:1280px;
+  margin:0 auto;
+  padding:0 24px;
+  display:grid;
+  grid-template-columns:1.15fr 1fr;
+  gap:80px;
+  align-items:center;
+  position:relative;
+}
+.hero-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:8px 16px;
+  background:var(--blue-soft);
+  border:1px solid var(--blue-border);
+  border-radius:100px;
+  font-size:13px;
+  font-weight:600;
+  color:var(--blue);
+  margin-bottom:24px;
+}
+.hero-badge svg{width:16px;height:16px}
+.hero h1{
+  font-size:clamp(2.5rem,5vw,4rem);
+  font-weight:800;
+  line-height:1.08;
+  color:var(--navy);
+  letter-spacing:-.025em;
+  margin-bottom:24px;
+}
+.hero h1 span{color:var(--blue)}
+.hero-sub{
+  font-size:1.2rem;
+  color:var(--text-muted);
+  line-height:1.6;
+  max-width:560px;
+  margin-bottom:36px;
+}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:48px}
+.hero-trust{
+  display:flex;
+  gap:32px;
+  padding-top:32px;
+  border-top:1px solid var(--gray-200);
+  flex-wrap:wrap;
+}
+.trust-item{display:flex;align-items:center;gap:10px;color:var(--text-muted);font-size:14px;font-weight:600}
+.trust-item svg{width:20px;height:20px;color:var(--green);flex-shrink:0}
+
+/* Hero visual — card stack */
+.hero-visual{
+  position:relative;
+  min-height:520px;
+}
+.hero-img{
+  position:absolute;
+  inset:0;
+  background:var(--navy);
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  box-shadow:0 20px 60px rgba(10,37,64,.25);
+}
+.hero-img img{width:100%;height:100%;object-fit:cover}
+.hero-card{
+  position:absolute;
+  background:var(--white);
+  border-radius:var(--radius-lg);
+  padding:20px 24px;
+  box-shadow:0 10px 30px rgba(10,37,64,.15);
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+.hero-card-tl{top:30px;left:-20px;max-width:280px}
+.hero-card-br{bottom:30px;right:-20px;max-width:260px}
+.hero-card-icon{
+  width:48px;
+  height:48px;
+  border-radius:var(--radius);
+  background:var(--blue-soft);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+.hero-card-icon svg{width:24px;height:24px;color:var(--blue)}
+.hero-card-text strong{display:block;font-size:15px;font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:2px}
+.hero-card-text span{font-size:13px;color:var(--text-muted)}
+
+/* ============================================
+   TRUSTED BY LOGOS
+   ============================================ */
+.trusted{
+  background:var(--white);
+  border-top:1px solid var(--gray-200);
+  border-bottom:1px solid var(--gray-200);
+  padding:40px 24px;
+}
+.trusted-inner{max-width:1280px;margin:0 auto}
+.trusted-label{
+  text-align:center;
+  font-size:13px;
+  font-weight:600;
+  color:var(--text-light);
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  margin-bottom:28px;
+}
+.trusted-grid{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:40px;
+  align-items:center;
+}
+.trusted-logo{
+  height:36px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:var(--text-light);
+  font-weight:700;
+  font-size:14px;
+  opacity:.65;
+  transition:opacity .2s;
+  background:var(--gray-100);
+  border-radius:var(--radius);
+  padding:0 20px;
+}
+.trusted-logo:hover{opacity:1}
+
+/* ============================================
+   SECTION BASICS
+   ============================================ */
+section{padding:100px 24px}
 .container{max-width:1280px;margin:0 auto}
-.section-head{margin-bottom:70px;max-width:720px}
-.section-head.center{margin-left:auto;margin-right:auto;text-align:center}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--pulse);font-weight:600;margin-bottom:18px}
-.eyebrow::before{content:'';display:block;width:32px;height:1px;background:var(--pulse)}
-.section-head.center .eyebrow{justify-content:center}
-.section-head.center .eyebrow::before{display:none}
-.section-head h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(2rem,3.8vw,3.2rem);line-height:1.1;letter-spacing:-.02em;margin-bottom:18px}
-.section-head h2 em{font-style:italic;color:var(--pulse)}
-.section-head p{font-size:1.05rem;color:var(--muted);max-width:580px;line-height:1.7}
-.section-head.center p{margin-left:auto;margin-right:auto}
+.section-head{text-align:center;margin-bottom:64px}
+.section-eyebrow{
+  display:inline-block;
+  padding:6px 14px;
+  background:var(--blue-soft);
+  color:var(--blue);
+  border-radius:100px;
+  font-size:13px;
+  font-weight:700;
+  margin-bottom:16px;
+  letter-spacing:.02em;
+}
+.section-head h2{
+  font-size:clamp(2rem,3.8vw,3rem);
+  font-weight:800;
+  color:var(--navy);
+  line-height:1.1;
+  letter-spacing:-.02em;
+  margin-bottom:16px;
+  max-width:780px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.section-head h2 span{color:var(--blue)}
+.section-head p{
+  font-size:1.15rem;
+  color:var(--text-muted);
+  max-width:620px;
+  margin:0 auto;
+  line-height:1.6;
+}
 
-/* About preview */
-.about-pre{background:var(--bone);position:relative}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;max-width:1180px;margin:0 auto}
-.about-img{aspect-ratio:4/5;background:var(--ink-2);border-radius:2px;overflow:hidden;position:relative}
-.about-img img{width:100%;height:100%;object-fit:cover}
-.about-img::before{content:'';position:absolute;top:-20px;left:-20px;right:20px;bottom:20px;border:1px solid var(--pulse);border-radius:2px;z-index:0}
-.about-img{z-index:1}
-.about-img-wrap{position:relative;padding:20px 20px 0 0}
-.about-points{list-style:none;margin:28px 0 40px}
-.about-points li{padding:14px 0;border-bottom:1px solid var(--line);font-size:1rem;display:flex;align-items:center;gap:14px}
-.about-points li::before{content:'';width:6px;height:6px;background:var(--pulse);border-radius:50%;flex-shrink:0}
+/* ============================================
+   SERVICES - Card grid
+   ============================================ */
+.services{background:var(--white)}
+.services-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:24px;
+}
+.service-card{
+  background:var(--white);
+  border:1px solid var(--gray-200);
+  border-radius:var(--radius-lg);
+  padding:36px 32px;
+  transition:all .2s;
+  display:flex;
+  flex-direction:column;
+}
+.service-card:hover{
+  border-color:var(--blue);
+  transform:translateY(-4px);
+  box-shadow:0 20px 40px rgba(10,37,64,.08);
+}
+.service-icon{
+  width:56px;
+  height:56px;
+  background:var(--blue-soft);
+  border-radius:var(--radius);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:24px;
+}
+.service-icon svg{width:28px;height:28px;color:var(--blue)}
+.service-card h3{
+  font-size:1.3rem;
+  font-weight:700;
+  color:var(--navy);
+  margin-bottom:12px;
+  letter-spacing:-.01em;
+}
+.service-card p{
+  color:var(--text-muted);
+  font-size:15px;
+  line-height:1.6;
+  margin-bottom:20px;
+  flex:1;
+}
+.service-features{list-style:none;margin-bottom:24px}
+.service-features li{
+  padding:6px 0;
+  font-size:14px;
+  color:var(--text);
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:500;
+}
+.service-features li svg{width:16px;height:16px;color:var(--green);flex-shrink:0}
+.service-link{
+  color:var(--blue);
+  font-weight:600;
+  font-size:14px;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  margin-top:auto;
+  transition:gap .2s;
+}
+.service-link:hover{gap:10px}
+.service-link svg{width:14px;height:14px}
 
-/* Services */
-.services-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:20px}
-.service-card{background:var(--paper);border:1px solid var(--line);padding:48px 40px;border-radius:2px;position:relative;overflow:hidden;transition:border-color .3s,transform .3s}
-.service-card:hover{border-color:var(--pulse);transform:translateY(-4px)}
-.service-card::before{content:'';position:absolute;top:0;left:0;width:4px;height:0;background:var(--pulse);transition:height .3s}
-.service-card:hover::before{height:100%}
-.service-num{font-family:'Fraunces',serif;font-size:.9rem;color:var(--pulse);letter-spacing:.1em;margin-bottom:20px;font-style:italic}
-.service-card h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.9rem;line-height:1.15;letter-spacing:-.01em;margin-bottom:16px}
-.service-card p{color:var(--muted);margin-bottom:24px;font-size:.98rem;line-height:1.7}
-.service-list{list-style:none;margin-bottom:32px}
-.service-list li{padding:10px 0;border-bottom:1px solid var(--line);font-size:.92rem;font-weight:500;display:flex;align-items:center;gap:12px}
-.service-list li:last-child{border-bottom:none}
-.service-list li::before{content:'→';color:var(--pulse);font-weight:600}
-.service-link{font-size:.85rem;font-weight:600;color:var(--ink);letter-spacing:.05em;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px;transition:gap .2s,color .2s}
-.service-link:hover{gap:14px;color:var(--pulse)}
+/* ============================================
+   STATS - Trust section
+   ============================================ */
+.stats{
+  background:var(--navy);
+  color:var(--white);
+  padding:80px 24px;
+  position:relative;
+  overflow:hidden;
+}
+.stats::before{
+  content:'';
+  position:absolute;
+  top:-50%;
+  right:-20%;
+  width:700px;
+  height:700px;
+  background:radial-gradient(circle,rgba(37,99,235,.15) 0%,transparent 60%);
+  pointer-events:none;
+}
+.stats-inner{
+  max-width:1280px;
+  margin:0 auto;
+  position:relative;
+}
+.stats-head{text-align:center;margin-bottom:56px;max-width:720px;margin-left:auto;margin-right:auto}
+.stats-head .section-eyebrow{background:rgba(255,255,255,.1);color:#93c5fd}
+.stats-head h2{
+  font-size:clamp(2rem,3.5vw,2.8rem);
+  font-weight:800;
+  color:var(--white);
+  line-height:1.15;
+  letter-spacing:-.02em;
+  margin-bottom:16px;
+}
+.stats-head p{color:rgba(255,255,255,.75);font-size:1.1rem;line-height:1.6}
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:40px;
+}
+.stat{
+  text-align:center;
+  padding:24px;
+}
+.stat-num{
+  font-size:clamp(2.8rem,4vw,3.6rem);
+  font-weight:800;
+  color:var(--white);
+  line-height:1;
+  margin-bottom:12px;
+  letter-spacing:-.02em;
+}
+.stat-label{
+  font-size:15px;
+  color:rgba(255,255,255,.75);
+  font-weight:500;
+}
 
-/* Why choose - comparison */
-.compare{background:var(--ink);color:var(--paper)}
-.compare .section-head h2{color:var(--paper)}
-.compare .section-head p{color:rgba(250,250,247,.65)}
-.compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:rgba(250,250,247,.1);border-radius:2px;overflow:hidden;max-width:1080px;margin:0 auto}
-.compare-col{background:var(--ink-2);padding:48px 40px}
-.compare-col.us{background:linear-gradient(180deg,var(--ink-2),rgba(217,65,65,.08))}
-.compare-col h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.6rem;margin-bottom:32px;padding-bottom:20px;border-bottom:1px solid rgba(250,250,247,.15);display:flex;align-items:center;gap:12px}
-.compare-col.us h3{color:var(--pulse)}
-.compare-col.us h3::before{content:'';width:8px;height:8px;background:var(--pulse);border-radius:50%}
-.compare-col.them h3{color:rgba(250,250,247,.5)}
-.compare-col ul{list-style:none}
-.compare-col li{padding:16px 0;border-bottom:1px solid rgba(250,250,247,.08);font-size:.95rem;color:rgba(250,250,247,.85);line-height:1.6;display:flex;gap:12px;align-items:flex-start}
-.compare-col li:last-child{border-bottom:none}
-.compare-col.us li::before{content:'✓';color:var(--pulse);font-weight:700;flex-shrink:0}
-.compare-col.them li{color:rgba(250,250,247,.45)}
-.compare-col.them li::before{content:'✕';color:rgba(250,250,247,.3);flex-shrink:0}
+/* ============================================
+   WHY US - Side by side with image
+   ============================================ */
+.why-us{background:var(--gray-50)}
+.why-grid{
+  display:grid;
+  grid-template-columns:1fr 1.1fr;
+  gap:80px;
+  align-items:center;
+}
+.why-image{
+  aspect-ratio:4/5;
+  background:var(--navy);
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+  position:relative;
+  box-shadow:0 20px 60px rgba(10,37,64,.15);
+}
+.why-image img{width:100%;height:100%;object-fit:cover}
+.why-image-badge{
+  position:absolute;
+  bottom:24px;
+  left:24px;
+  right:24px;
+  background:var(--white);
+  padding:20px 24px;
+  border-radius:var(--radius);
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+.why-image-badge-icon{
+  width:44px;
+  height:44px;
+  border-radius:var(--radius);
+  background:var(--blue-soft);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+.why-image-badge-icon svg{width:22px;height:22px;color:var(--blue)}
+.why-image-badge-text strong{display:block;font-size:14px;font-weight:700;color:var(--navy);margin-bottom:2px}
+.why-image-badge-text span{font-size:13px;color:var(--text-muted)}
 
-/* Testimonials */
-.testimonials{background:var(--bone)}
-.test-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:28px;margin-top:20px}
-.test-card{background:var(--paper);border:1px solid var(--line);padding:40px;border-radius:2px;position:relative;transition:border-color .3s}
-.test-card:hover{border-color:var(--pulse)}
-.test-quote{font-family:'Fraunces',serif;font-style:italic;font-size:1.15rem;line-height:1.55;color:var(--ink);margin-bottom:28px}
-.test-quote::before{content:'"';font-size:3rem;color:var(--pulse);line-height:0;margin-right:6px;vertical-align:-.35em}
-.test-author{display:flex;align-items:center;gap:16px;padding-top:24px;border-top:1px solid var(--line)}
-.test-avatar{width:52px;height:52px;border-radius:50%;background:var(--ink-2);flex-shrink:0;overflow:hidden}
-.test-avatar img{width:100%;height:100%;object-fit:cover}
-.test-name{font-weight:600;font-size:.95rem;line-height:1.3}
-.test-role{font-size:.82rem;color:var(--muted);margin-top:2px}
+.why-content .section-eyebrow{margin-bottom:16px}
+.why-content h2{
+  font-size:clamp(2rem,3.5vw,2.8rem);
+  font-weight:800;
+  color:var(--navy);
+  line-height:1.15;
+  letter-spacing:-.02em;
+  margin-bottom:20px;
+}
+.why-content h2 span{color:var(--blue)}
+.why-content>p{
+  color:var(--text-muted);
+  font-size:1.1rem;
+  line-height:1.65;
+  margin-bottom:32px;
+}
+.why-features{list-style:none;display:flex;flex-direction:column;gap:20px}
+.why-feature{display:flex;gap:16px}
+.why-feature-icon{
+  width:44px;
+  height:44px;
+  border-radius:var(--radius);
+  background:var(--blue-soft);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+.why-feature-icon svg{width:22px;height:22px;color:var(--blue)}
+.why-feature-text strong{display:block;font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:4px}
+.why-feature-text p{color:var(--text-muted);font-size:14px;line-height:1.55;margin:0}
 
-/* News */
-.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:20px}
-.news-card{background:var(--paper);border:1px solid var(--line);border-radius:2px;overflow:hidden;transition:transform .3s,box-shadow .3s}
-.news-card:hover{transform:translateY(-4px);box-shadow:0 16px 40px rgba(0,0,0,.06)}
-.news-img{aspect-ratio:16/10;background:var(--ink-2);overflow:hidden}
-.news-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
-.news-card:hover .news-img img{transform:scale(1.05)}
-.news-body{padding:28px}
-.news-tag{display:inline-block;font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--pulse);font-weight:600;margin-bottom:12px}
-.news-body h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.15rem;line-height:1.3;margin-bottom:16px}
-.news-link{font-size:.82rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;display:inline-flex;align-items:center;gap:8px}
-.news-link:hover{color:var(--pulse)}
+/* ============================================
+   COMPARISON TABLE
+   ============================================ */
+.compare{background:var(--white)}
+.compare-wrap{
+  max-width:1000px;
+  margin:0 auto;
+  background:var(--white);
+  border:1px solid var(--gray-200);
+  border-radius:var(--radius-lg);
+  overflow:hidden;
+}
+.compare-head{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  background:var(--gray-50);
+  border-bottom:1px solid var(--gray-200);
+}
+.compare-head>div{padding:24px 28px;font-weight:700;font-size:15px}
+.compare-head>div:first-child{color:var(--text-muted);font-weight:600}
+.compare-head .us{color:var(--blue);text-align:center;background:var(--blue-soft);border-left:1px solid var(--gray-200);border-right:1px solid var(--gray-200);position:relative}
+.compare-head .us::before{
+  content:'';
+  position:absolute;
+  top:-1px;
+  left:0;
+  right:0;
+  height:3px;
+  background:var(--blue);
+}
+.compare-head .them{color:var(--text-muted);text-align:center}
+.compare-row{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  border-bottom:1px solid var(--gray-200);
+}
+.compare-row:last-child{border-bottom:none}
+.compare-row>div{padding:20px 28px;font-size:15px;display:flex;align-items:center}
+.compare-row .feat{font-weight:600;color:var(--text)}
+.compare-row .us{justify-content:center;background:rgba(239,246,255,.4);border-left:1px solid var(--gray-200);border-right:1px solid var(--gray-200)}
+.compare-row .them{justify-content:center;color:var(--text-muted)}
+.check-icon{width:22px;height:22px;color:var(--green)}
+.x-icon{width:22px;height:22px;color:var(--text-light)}
 
-/* CTA banner */
-.cta-banner{background:var(--ink);color:var(--paper);padding:100px 40px;text-align:center;position:relative;overflow:hidden}
-.cta-banner::before{content:'';position:absolute;top:-100px;right:-100px;width:400px;height:400px;border:1px solid rgba(217,65,65,.15);border-radius:50%}
-.cta-banner::after{content:'';position:absolute;bottom:-150px;left:-100px;width:500px;height:500px;border:1px solid rgba(217,65,65,.1);border-radius:50%}
-.cta-inner{position:relative;z-index:1;max-width:720px;margin:0 auto}
-.cta-banner h2{font-family:'Fraunces',serif;font-weight:500;font-size:clamp(2rem,4vw,3rem);color:var(--paper);margin-bottom:20px;line-height:1.1}
-.cta-banner h2 em{font-style:italic;color:var(--pulse)}
-.cta-banner p{color:rgba(250,250,247,.7);max-width:560px;margin:0 auto 40px;font-size:1.05rem}
-.cta-actions{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:20px}
-.btn-pulse{background:var(--pulse);color:var(--paper);padding:18px 36px;border-radius:2px;font-size:.9rem;font-weight:600;letter-spacing:.04em;transition:background .2s,transform .2s;display:inline-flex;align-items:center;gap:10px}
-.btn-pulse:hover{background:var(--pulse-deep);transform:translateY(-1px)}
-.btn-ghost{background:transparent;border:1px solid rgba(250,250,247,.3);color:var(--paper);padding:18px 36px;border-radius:2px;font-size:.9rem;font-weight:600;letter-spacing:.04em;transition:all .2s}
-.btn-ghost:hover{border-color:var(--paper);background:rgba(250,250,247,.05)}
+/* ============================================
+   TESTIMONIAL
+   ============================================ */
+.testimonial{background:var(--gray-50)}
+.testimonial-card{
+  max-width:900px;
+  margin:0 auto;
+  background:var(--white);
+  border-radius:var(--radius-lg);
+  padding:60px;
+  text-align:center;
+  border:1px solid var(--gray-200);
+  position:relative;
+}
+.testimonial-quote-mark{
+  width:56px;
+  height:56px;
+  background:var(--blue);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto -28px;
+  position:relative;
+  top:-30px;
+  color:var(--white);
+  font-size:32px;
+  font-weight:800;
+  line-height:1;
+  padding-top:20px;
+}
+.testimonial-stars{
+  display:flex;
+  justify-content:center;
+  gap:4px;
+  margin-bottom:24px;
+  color:#fbbf24;
+  font-size:22px;
+}
+.testimonial-text{
+  font-size:1.35rem;
+  color:var(--text);
+  line-height:1.5;
+  margin-bottom:32px;
+  font-weight:500;
+  max-width:720px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.testimonial-author{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+}
+.testimonial-avatar{
+  width:56px;
+  height:56px;
+  border-radius:50%;
+  background:var(--navy);
+  overflow:hidden;
+  flex-shrink:0;
+}
+.testimonial-avatar img{width:100%;height:100%;object-fit:cover}
+.testimonial-author-info{text-align:left}
+.testimonial-author-info strong{display:block;font-weight:700;color:var(--navy)}
+.testimonial-author-info span{font-size:14px;color:var(--text-muted)}
 
-/* Partner logos strip */
-.partners{padding:70px 40px;background:var(--paper);border-top:1px solid var(--line)}
-.partners-head{text-align:center;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-bottom:40px;font-weight:600}
-.partners-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:40px;align-items:center;max-width:1100px;margin:0 auto;opacity:.55}
-.partner-logo{height:48px;background:var(--line);border-radius:2px;display:flex;align-items:center;justify-content:center;font-size:.7rem;color:var(--muted);letter-spacing:.1em;text-transform:uppercase}
+/* ============================================
+   INDUSTRIES SERVED
+   ============================================ */
+.industries{background:var(--white)}
+.industries-grid{
+  display:grid;
+  grid-template-columns:2fr 1fr 1fr;
+  gap:24px;
+}
+.industry-card{
+  background:var(--white);
+  border:1px solid var(--gray-200);
+  border-radius:var(--radius-lg);
+  padding:36px 32px;
+  transition:all .2s;
+  position:relative;
+  overflow:hidden;
+}
+.industry-card:hover{border-color:var(--blue);transform:translateY(-4px);box-shadow:0 20px 40px rgba(10,37,64,.08)}
+.industry-card.featured{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-light) 100%);
+  color:var(--white);
+  border:none;
+  padding:48px 40px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  min-height:380px;
+  position:relative;
+  overflow:hidden;
+}
+.industry-card.featured::before{
+  content:'';
+  position:absolute;
+  top:-50%;
+  right:-30%;
+  width:600px;
+  height:600px;
+  background:radial-gradient(circle,rgba(37,99,235,.2) 0%,transparent 60%);
+  pointer-events:none;
+}
+.industry-badge{
+  display:inline-block;
+  padding:4px 12px;
+  background:var(--blue);
+  color:var(--white);
+  border-radius:100px;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  margin-bottom:16px;
+}
+.industry-card.featured .industry-badge{background:rgba(255,255,255,.15);color:#93c5fd}
+.industry-card h3{
+  font-size:1.4rem;
+  font-weight:700;
+  color:var(--navy);
+  margin-bottom:12px;
+  letter-spacing:-.01em;
+}
+.industry-card.featured h3{color:var(--white);font-size:1.9rem;margin-bottom:16px;position:relative}
+.industry-card p{
+  color:var(--text-muted);
+  font-size:14px;
+  line-height:1.6;
+  position:relative;
+}
+.industry-card.featured p{color:rgba(255,255,255,.8);font-size:15px;margin-bottom:24px}
+.industry-card .industry-examples{
+  margin-top:20px;
+  padding-top:16px;
+  border-top:1px solid var(--gray-200);
+  font-size:13px;
+  color:var(--text-light);
+  line-height:1.7;
+}
+.industry-card.featured .industry-examples{border-color:rgba(255,255,255,.15);color:rgba(255,255,255,.7)}
 
-/* Areas we serve */
-.areas{padding:80px 40px;background:var(--bone)}
-.areas h3{font-family:'Fraunces',serif;font-weight:500;font-size:1.4rem;text-align:center;margin-bottom:36px}
-.areas-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;max-width:1080px;margin:0 auto}
-.area{padding:14px 20px;background:var(--paper);border:1px solid var(--line);border-radius:2px;text-align:center;font-size:.88rem;font-weight:500;transition:all .2s}
-.area:hover{border-color:var(--pulse);color:var(--pulse)}
+/* ============================================
+   CTA
+   ============================================ */
+.cta{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--navy-dark) 100%);
+  padding:80px 24px;
+  position:relative;
+  overflow:hidden;
+}
+.cta::before{
+  content:'';
+  position:absolute;
+  top:-30%;
+  left:-10%;
+  width:500px;
+  height:500px;
+  background:radial-gradient(circle,rgba(37,99,235,.15) 0%,transparent 60%);
+  pointer-events:none;
+}
+.cta-inner{
+  max-width:900px;
+  margin:0 auto;
+  text-align:center;
+  position:relative;
+  color:var(--white);
+}
+.cta h2{
+  font-size:clamp(2rem,4vw,3rem);
+  font-weight:800;
+  color:var(--white);
+  line-height:1.1;
+  letter-spacing:-.02em;
+  margin-bottom:20px;
+}
+.cta p{
+  color:rgba(255,255,255,.8);
+  font-size:1.15rem;
+  line-height:1.6;
+  margin-bottom:36px;
+  max-width:600px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
-/* Footer */
-footer{background:var(--ink);color:rgba(250,250,247,.6);padding:80px 40px 40px}
-.footer-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:60px;margin-bottom:56px}
-.footer-brand .logo img{height:42px;margin-bottom:20px;filter:brightness(0) invert(1)}
-.footer-brand p{font-size:.92rem;line-height:1.7;max-width:320px;color:rgba(250,250,247,.55)}
-.footer-col h4{font-family:'Fraunces',serif;color:var(--paper);font-size:1rem;margin-bottom:20px;font-weight:500}
+/* ============================================
+   FOOTER
+   ============================================ */
+footer{
+  background:var(--navy-dark);
+  color:rgba(255,255,255,.7);
+  padding:72px 24px 24px;
+}
+.footer-inner{max-width:1280px;margin:0 auto}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:48px;
+  padding-bottom:48px;
+  border-bottom:1px solid rgba(255,255,255,.1);
+}
+.footer-brand .logo-text{color:var(--white)}
+.footer-brand .logo-text span{color:rgba(255,255,255,.6)}
+.footer-brand p{
+  font-size:14px;
+  line-height:1.6;
+  color:rgba(255,255,255,.65);
+  max-width:300px;
+  margin-top:16px;
+  margin-bottom:24px;
+}
+.footer-social{display:flex;gap:10px}
+.footer-social a{
+  width:36px;
+  height:36px;
+  border-radius:8px;
+  background:rgba(255,255,255,.08);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:background .2s;
+}
+.footer-social a:hover{background:var(--blue)}
+.footer-social svg{width:16px;height:16px;color:var(--white)}
+.footer-col h4{
+  color:var(--white);
+  font-size:15px;
+  font-weight:700;
+  margin-bottom:20px;
+}
 .footer-col ul{list-style:none}
-.footer-col li{margin-bottom:12px;font-size:.88rem}
-.footer-col a:hover{color:var(--pulse)}
-.footer-social{display:flex;gap:10px;margin-top:16px}
-.footer-social a{width:36px;height:36px;border:1px solid rgba(250,250,247,.2);border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .2s}
-.footer-social a:hover{border-color:var(--pulse);color:var(--pulse)}
-.footer-social svg{width:16px;height:16px}
-.footer-bottom{max-width:1280px;margin:0 auto;padding-top:32px;border-top:1px solid rgba(250,250,247,.1);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:.82rem}
+.footer-col li{margin-bottom:10px}
+.footer-col a{font-size:14px;color:rgba(255,255,255,.65);transition:color .15s}
+.footer-col a:hover{color:var(--white)}
+.footer-col .contact-item{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:14px;
+  color:rgba(255,255,255,.65);
+  margin-bottom:10px;
+}
+.footer-col .contact-item svg{width:16px;height:16px;color:var(--blue)}
+.footer-col .contact-item a{color:var(--white);font-weight:600}
+.footer-bottom{
+  padding-top:24px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:16px;
+  font-size:13px;
+  color:rgba(255,255,255,.5);
+}
+.footer-legal{display:flex;gap:24px;flex-wrap:wrap}
+.footer-legal a:hover{color:var(--white)}
 
-/* Mobile */
+/* ============================================
+   RESPONSIVE
+   ============================================ */
 @media(max-width:1024px){
-  .hero-inner,.about-grid{grid-template-columns:1fr;gap:50px}
-  .hero::before{display:none}
-  .services-grid,.compare-grid,.test-grid{grid-template-columns:1fr}
-  .news-grid{grid-template-columns:1fr 1fr}
-  .partners-grid{grid-template-columns:repeat(4,1fr)}
+  .hero-inner{grid-template-columns:1fr;gap:60px}
+  .hero-visual{max-width:500px;margin:0 auto}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .why-grid{grid-template-columns:1fr;gap:40px}
+  .why-image{max-width:500px;margin:0 auto}
+  .industries-grid{grid-template-columns:1fr 1fr}
+  .industry-card.featured{grid-column:span 2}
+  .trusted-grid{grid-template-columns:repeat(3,1fr)}
   .footer-grid{grid-template-columns:1fr 1fr;gap:40px}
+  .stats-grid{grid-template-columns:1fr 1fr;gap:30px}
 }
 @media(max-width:768px){
-  nav{padding:14px 20px}
-  .nav-center{display:none;position:absolute;top:100%;left:0;right:0;background:var(--paper);flex-direction:column;padding:24px;gap:18px;border-bottom:1px solid var(--line);box-shadow:0 8px 24px rgba(0,0,0,.06)}
-  .nav-center.open{display:flex}
-  .nav-center a.active::after{display:none}
+  .top-bar-inner{justify-content:center;font-size:12px}
+  .top-bar-left{gap:16px;justify-content:center}
+  .nav-links,.btn-phone{display:none}
+  .nav-links.open{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--white);padding:20px;gap:4px;border-bottom:1px solid var(--gray-200);box-shadow:0 4px 12px rgba(0,0,0,.05)}
+  .nav-links.open>a{width:100%;padding:14px 16px}
   .hamburger{display:block}
-  section{padding:70px 24px}
-  .hero{padding:60px 24px 80px}
-  .hero-stats{gap:32px;flex-wrap:wrap}
-  .hero-cta-row{flex-direction:column;gap:12px}
+  section{padding:60px 20px}
+  .hero{padding:50px 0 60px}
+  .hero-inner{padding:0 20px}
+  .hero-actions{flex-direction:column;width:100%}
   .btn-primary,.btn-secondary{width:100%;justify-content:center}
-  .news-grid{grid-template-columns:1fr}
-  .partners-grid{grid-template-columns:repeat(3,1fr);gap:24px}
-  .footer-grid{grid-template-columns:1fr;gap:40px}
-  .cta-actions{flex-direction:column;align-items:center}
-  .btn-pulse,.btn-ghost{width:100%;max-width:320px;justify-content:center}
+  .hero-trust{gap:16px}
+  .hero-card-tl{top:20px;left:10px;right:10px;max-width:none}
+  .hero-card-br{bottom:20px;right:10px;left:10px;max-width:none}
+  .services-grid{grid-template-columns:1fr}
+  .industries-grid{grid-template-columns:1fr}
+  .industry-card.featured{grid-column:auto;min-height:300px}
+  .compare-head>div,.compare-row>div{padding:14px 16px;font-size:13px}
+  .compare-head,.compare-row{grid-template-columns:1.5fr 80px 80px}
+  .testimonial-card{padding:40px 24px}
+  .testimonial-text{font-size:1.1rem}
+  .footer-grid{grid-template-columns:1fr;gap:32px}
+  .footer-bottom{justify-content:center;text-align:center}
+  .stats-grid{grid-template-columns:1fr 1fr;gap:20px}
+  .stat{padding:16px}
+  .trusted-grid{grid-template-columns:repeat(2,1fr);gap:20px}
+  .cta-actions{flex-direction:column}
+  .btn-white,.btn-outline-white{width:100%;justify-content:center}
 }
 </style>
 </head>
 <body>
 
-<div class="announce">24/7 response &bull; Licensed physician oversight &bull; <strong>Call (647) 696-8800</strong></div>
-
-<nav>
-  <a href="index.html" class="logo">
-    <img src="images/logo.png" alt="Pulsar Medical"/>
-  </a>
-  <div class="nav-center">
-    <a href="index.html" class="active">Home</a>
-    <a href="services.html">Services</a>
-    <a href="news.html">News</a>
-    <a href="about.html">About Us</a>
+<!-- TOP BAR -->
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="top-bar-left">
+      <span class="top-bar-item">
+        <span class="status-dot"></span>
+        24/7 Availability
+      </span>
+      <span class="top-bar-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg>
+        Fully Licensed &amp; Insured
+      </span>
+      <span class="top-bar-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Serving all of Ontario
+      </span>
+    </div>
+    <div class="top-bar-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <a href="tel:+16476968800">(647) 696-8800</a>
+    </div>
   </div>
-  <a href="contact.html" class="nav-cta">Contact Us</a>
-  <button class="hamburger" onclick="document.querySelector('.nav-center').classList.toggle('open')">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+</div>
 
-<!-- Hero -->
+<!-- HEADER / NAV -->
+<header>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">P</div>
+      <div class="logo-text">
+        Pulsar Medical
+        <span>Professional Medical Staffing</span>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="services.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta-group">
+      <a href="tel:+16476968800" class="btn-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        (647) 696-8800
+      </a>
+      <a href="contact.html" class="btn-primary">
+        Request Staffing
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
 <section class="hero">
+  <div class="hero-bg"></div>
   <div class="hero-inner">
     <div>
-      <div class="hero-eyebrow">Set Medics &middot; Film &amp; TV</div>
-      <h1>Medical care that keeps <em>cameras rolling.</em></h1>
-      <p class="hero-sub">Set-savvy medical professionals, specialty extras, and production consulting for film &amp; TV shoots across Ontario. 18 years of industry experience. Zero shutdowns.</p>
-      <div class="hero-stats">
-        <div class="hero-stat"><div class="num">18</div><div class="lbl">Years Experience</div></div>
-        <div class="hero-stat"><div class="num">24/7</div><div class="lbl">Response</div></div>
-        <div class="hero-stat"><div class="num">100%</div><div class="lbl">Licensed &amp; Insured</div></div>
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        Licensed Medical Professionals
       </div>
-      <div class="hero-cta-row">
-        <a href="contact.html" class="btn-primary">Request a Medic <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-        <a href="services.html" class="btn-secondary">View Services</a>
+      <h1>Professional medical staffing for <span>productions, events &amp; workplaces</span></h1>
+      <p class="hero-sub">On-site medical teams led by licensed physicians. 18 years of industry experience. Trusted by Canada's top production companies, event organizers, and workplaces across Ontario.</p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn-primary">
+          Request Medical Staff
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="services.html" class="btn-secondary">View Our Services</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg>
+          Physician-Directed
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg>
+          WSIB Covered
+        </div>
+        <div class="trust-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg>
+          HIPAA Compliant
+        </div>
       </div>
     </div>
     <div class="hero-visual">
-      <img src="images/hero.jpg" alt="Pulsar Medical on set"/>
-      <div class="hero-card">
-        <div class="hero-card-dot"></div>
+      <div class="hero-img">
+        <img src="images/hero.jpg" alt="Pulsar Medical team"/>
+      </div>
+      <div class="hero-card hero-card-tl">
+        <div class="hero-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
         <div class="hero-card-text">
-          <strong>Currently on set</strong>
-          <span>Productions across Ontario</span>
+          <strong>24/7 Response</strong>
+          <span>Same-day deployment</span>
+        </div>
+      </div>
+      <div class="hero-card hero-card-br">
+        <div class="hero-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div class="hero-card-text">
+          <strong>Certified Medics</strong>
+          <span>All first responders</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- About preview -->
-<section class="about-pre">
-  <div class="container">
-    <div class="about-grid">
-      <div class="about-img-wrap">
-        <div class="about-img">
-          <img src="images/about.jpg" alt="Pulsar Medical team"/>
-        </div>
-      </div>
-      <div>
-        <div class="eyebrow">About Pulsar Medical</div>
-        <h2 style="font-family:'Fraunces',serif;font-weight:500;font-size:clamp(2rem,3.8vw,3rem);line-height:1.1;letter-spacing:-.02em;margin-bottom:22px">Film-industry veterans. <em style="font-style:italic;color:var(--pulse)">Medical-grade care.</em></h2>
-        <p style="color:var(--muted);font-size:1.05rem;line-height:1.75">Pulsar Medical provides set-savvy medical professionals to film and TV productions all across Ontario. We know the pace of production because we come from the industry. Since 2020, we've delivered reliable, professional on-site medical support that keeps productions compliant, safe, and on schedule.</p>
-        <ul class="about-points">
-          <li>Licensed Physician Oversight</li>
-          <li>Set-Savvy Certified Medics</li>
-          <li>Specialized Medical Consultants</li>
-          <li>Fully Insured &amp; WSIB-Covered</li>
-        </ul>
-        <a href="about.html" class="btn-primary">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
-      </div>
+<!-- TRUSTED BY -->
+<section class="trusted">
+  <div class="trusted-inner">
+    <div class="trusted-label">Trusted by productions &amp; organizations across Ontario</div>
+    <div class="trusted-grid">
+      <div class="trusted-logo">CLIENT ONE</div>
+      <div class="trusted-logo">CLIENT TWO</div>
+      <div class="trusted-logo">CLIENT THREE</div>
+      <div class="trusted-logo">CLIENT FOUR</div>
+      <div class="trusted-logo">CLIENT FIVE</div>
+      <div class="trusted-logo">CLIENT SIX</div>
     </div>
   </div>
 </section>
 
-<!-- Services -->
-<section>
+<!-- SERVICES -->
+<section class="services">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow">What We Do</div>
-      <h2>Two divisions, <em>one standard.</em></h2>
-      <p>From film productions to live events, our medical teams bring the same level of professionalism, preparation, and on-call responsiveness.</p>
+      <span class="section-eyebrow">Our Services</span>
+      <h2>Complete medical staffing solutions for <span>high-pressure environments</span></h2>
+      <p>From single-medic coverage to full medical operations, we deliver the right team for every engagement.</p>
     </div>
     <div class="services-grid">
+
       <div class="service-card">
-        <div class="service-num">— 01</div>
-        <h3>Film &amp; TV</h3>
-        <p>Trusted set medics for productions of every scale. We understand the pace, the pressure, and the compliance demands of a working set.</p>
-        <ul class="service-list">
-          <li>Licensed Physician Oversight</li>
-          <li>Set-Savvy Certified Medics</li>
-          <li>Specialized Medical Consultants</li>
-          <li>Health &amp; Safety Compliance</li>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+        </div>
+        <h3>Film &amp; TV Set Medics</h3>
+        <p>Certified medical professionals for film and television productions. 18 years of on-set experience.</p>
+        <ul class="service-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Set-savvy medics</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Multi-unit coverage</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Stunt-heavy productions</li>
         </ul>
-        <a href="services.html" class="service-link">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="services.html" class="service-link">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
       </div>
+
       <div class="service-card">
-        <div class="service-num">— 02</div>
-        <h3>Workplace &amp; Events</h3>
-        <p>On-site medics for concerts, festivals, corporate events, and workplace needs. Safety for attendees, performers, and crew.</p>
-        <ul class="service-list">
-          <li>Event &amp; Concert Medics</li>
-          <li>Workplace Medical Support</li>
-          <li>Medical Consulting</li>
-          <li>Festival &amp; Crowd Response</li>
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Event &amp; Festival Medics</h3>
+        <p>Scalable medical teams for concerts, festivals, and public gatherings of any size.</p>
+        <ul class="service-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Concerts &amp; festivals</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Corporate events</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Public gatherings</li>
         </ul>
-        <a href="services.html" class="service-link">Read More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="services.html" class="service-link">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M5 21V7l8-4v18"/><path d="M19 21V11l-6-4"/></svg>
+        </div>
+        <h3>Workplace Medical Support</h3>
+        <p>Ongoing or project-based medical coverage for industrial sites and corporate environments.</p>
+        <ul class="service-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Industrial sites</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Studio complexes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Compliance documentation</li>
+        </ul>
+        <a href="services.html" class="service-link">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg>
+        </div>
+        <h3>Physician Oversight</h3>
+        <p>Licensed physician medical direction on every engagement, with specialist network access.</p>
+        <ul class="service-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Licensed physicians</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Protocol development</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Specialist referrals</li>
+        </ul>
+        <a href="services.html" class="service-link">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <h3>Medical Consulting</h3>
+        <p>Pre-production planning, compliance review, and medical accuracy advisory.</p>
+        <ul class="service-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Safety planning</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Risk assessment</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Script medical review</li>
+        </ul>
+        <a href="services.html" class="service-link">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3>Specialty Medical Extras</h3>
+        <p>Real certified medics for on-camera medical roles and hospital scenes.</p>
+        <ul class="service-features">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Hospital scenes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Background talent</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>Technical advisory</li>
+        </ul>
+        <a href="services.html" class="service-link">Learn More <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="stats-inner">
+    <div class="stats-head">
+      <span class="section-eyebrow">By The Numbers</span>
+      <h2>Ontario's trusted choice for medical staffing</h2>
+      <p>Built on years of experience, accredited standards, and an uncompromising commitment to safety.</p>
+    </div>
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-num">18+</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">150+</div>
+        <div class="stat-label">5-Star Reviews</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">24/7</div>
+        <div class="stat-label">Response Time</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">100%</div>
+        <div class="stat-label">Licensed Staff</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Why choose -->
+<!-- WHY US -->
+<section class="why-us">
+  <div class="container">
+    <div class="why-grid">
+      <div class="why-image">
+        <img src="images/why-us.jpg" alt="Pulsar Medical in action"/>
+        <div class="why-image-badge">
+          <div class="why-image-badge-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg>
+          </div>
+          <div class="why-image-badge-text">
+            <strong>Zero Production Shutdowns</strong>
+            <span>Across all our engagements</span>
+          </div>
+        </div>
+      </div>
+      <div class="why-content">
+        <span class="section-eyebrow">Why Choose Pulsar</span>
+        <h2>The gold standard in <span>medical staffing</span></h2>
+        <p>We built Pulsar to raise the bar on what on-site medical care can be. Every deployment operates under licensed physician oversight, with certified medics who understand both clinical excellence and the environments we serve.</p>
+
+        <ul class="why-features">
+          <li class="why-feature">
+            <div class="why-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            </div>
+            <div class="why-feature-text">
+              <strong>Licensed Physician Oversight</strong>
+              <p>Every team operates under direct medical direction from a licensed physician.</p>
+            </div>
+          </li>
+          <li class="why-feature">
+            <div class="why-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+            <div class="why-feature-text">
+              <strong>Certified &amp; Experienced</strong>
+              <p>All staff are certified medical first responders with industry-specific training.</p>
+            </div>
+          </li>
+          <li class="why-feature">
+            <div class="why-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="why-feature-text">
+              <strong>24/7 Availability</strong>
+              <p>Fast response, including last-minute and overnight deployments across Ontario.</p>
+            </div>
+          </li>
+          <li class="why-feature">
+            <div class="why-feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <div class="why-feature-text">
+              <strong>Fully Equipped</strong>
+              <p>Complete medical kits (AED, EpiPen, Narcan) included on every engagement.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
 <section class="compare">
   <div class="container">
-    <div class="section-head center">
-      <div class="eyebrow">Why Pulsar</div>
-      <h2>What sets us <em>apart.</em></h2>
-      <p>Not all medical services are built for set. Here's how we compare to the rest.</p>
+    <div class="section-head">
+      <span class="section-eyebrow">How We Compare</span>
+      <h2>See the <span>Pulsar difference</span></h2>
+      <p>We don't cut corners. Here's how we stack up against typical medical service providers.</p>
     </div>
-    <div class="compare-grid">
-      <div class="compare-col us">
-        <h3>Pulsar Medical</h3>
-        <ul>
-          <li>Licensed physician overseeing every team</li>
-          <li>Access to specialized physicians &amp; consultants</li>
-          <li>Deep experience in both film &amp; medical fields</li>
-          <li>Fully-stocked medical kits (AED, EpiPen, Narcan) included</li>
-          <li>All staff are certified medical first responders</li>
-          <li>Fully licensed, insured, WSIB-covered, HIPAA-compliant</li>
-          <li>Secure, automated booking and documentation</li>
-          <li>24/7 availability &mdash; last-minute friendly</li>
-          <li>Transparent pricing, no hidden costs</li>
-        </ul>
+    <div class="compare-wrap">
+      <div class="compare-head">
+        <div>Feature</div>
+        <div class="us">Pulsar Medical</div>
+        <div class="them">Others</div>
       </div>
-      <div class="compare-col them">
-        <h3>Others</h3>
-        <ul>
-          <li>No licensed medical oversight</li>
-          <li>No direct access to expert medical consultants</li>
-          <li>Limited or no understanding of film industry needs</li>
-          <li>Often charge extra or bring minimal supplies</li>
-          <li>May use uncertified staff or non-medical personnel</li>
-          <li>Often lack full coverage or compliance</li>
-          <li>Manual, outdated, or insecure systems</li>
-          <li>Limited hours, slow to respond</li>
-          <li>Unexpected add-ons and unclear pricing</li>
-        </ul>
+      <div class="compare-row">
+        <div class="feat">Licensed Physician Oversight</div>
+        <div class="us"><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="them"><svg class="x-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
+      </div>
+      <div class="compare-row">
+        <div class="feat">Film &amp; TV Industry Experience</div>
+        <div class="us"><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="them"><svg class="x-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
+      </div>
+      <div class="compare-row">
+        <div class="feat">Full Medical Kit Included (AED, EpiPen, Narcan)</div>
+        <div class="us"><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="them"><svg class="x-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
+      </div>
+      <div class="compare-row">
+        <div class="feat">Certified Medical First Responders</div>
+        <div class="us"><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="them"><svg class="x-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
+      </div>
+      <div class="compare-row">
+        <div class="feat">HIPAA-Compliant Documentation</div>
+        <div class="us"><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="them"><svg class="x-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
+      </div>
+      <div class="compare-row">
+        <div class="feat">24/7 Last-Minute Availability</div>
+        <div class="us"><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="them"><svg class="x-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
+      </div>
+      <div class="compare-row">
+        <div class="feat">Transparent, All-In Pricing</div>
+        <div class="us"><svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg></div>
+        <div class="them"><svg class="x-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Testimonials -->
-<section class="testimonials">
+<!-- TESTIMONIAL -->
+<section class="testimonial">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow">Testimonials</div>
-      <h2>Trusted by <em>the industry.</em></h2>
+      <span class="section-eyebrow">Client Testimonial</span>
+      <h2>What industry leaders <span>say about us</span></h2>
     </div>
-    <div class="test-grid">
-      <div class="test-card">
-        <p class="test-quote">Having done two back-to-back series during COVID-19, I can unequivocally state that Pulsar is professional, expedient, top notch and thorough. That very same professionalism made our production feel safe and cared for. Not one shutdown in over 14 episodes with Pulsar.</p>
-        <div class="test-author">
-          <div class="test-avatar"><img src="images/test-1.jpg" alt=""/></div>
-          <div>
-            <div class="test-name">Matthew Hastings</div>
-            <div class="test-role">Producer &mdash; The Handmaid's Tale, Spinning Out</div>
-          </div>
+    <div class="testimonial-card">
+      <div class="testimonial-quote-mark">&ldquo;</div>
+      <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="testimonial-text">Pulsar is professional, expedient, top notch and thorough. Their professionalism made our production feel safe and cared for. Not one shutdown in over 14 episodes with Pulsar. So grateful for their care and guidance.</p>
+      <div class="testimonial-author">
+        <div class="testimonial-avatar">
+          <img src="images/testimonial-1.jpg" alt="Matthew Hastings"/>
         </div>
-      </div>
-      <div class="test-card">
-        <p class="test-quote">As moviemakers themselves, they can cut through the chaos on set.</p>
-        <div class="test-author">
-          <div class="test-avatar"><img src="images/test-2.jpg" alt=""/></div>
-          <div>
-            <div class="test-name">CBC News: The National</div>
-            <div class="test-role">National Television Feature</div>
-          </div>
-        </div>
-      </div>
-      <div class="test-card">
-        <p class="test-quote">Pulsar provided the highest level of COVID safety on our set.</p>
-        <div class="test-author">
-          <div class="test-avatar"><img src="images/test-3.jpg" alt=""/></div>
-          <div>
-            <div class="test-name">Tyler Levine</div>
-            <div class="test-role">Producer</div>
-          </div>
-        </div>
-      </div>
-      <div class="test-card">
-        <p class="test-quote">They recognized the need for such services after production shut down last spring.</p>
-        <div class="test-author">
-          <div class="test-avatar"><img src="images/test-4.jpg" alt=""/></div>
-          <div>
-            <div class="test-name">Yahoo! Movies</div>
-            <div class="test-role">March 01, 2021</div>
-          </div>
+        <div class="testimonial-author-info">
+          <strong>Matthew Hastings</strong>
+          <span>Producer &mdash; The Handmaid's Tale, Spinning Out</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- News -->
-<section>
+<!-- INDUSTRIES SERVED -->
+<section class="industries">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow">In the News</div>
-      <h2>Featured <em>coverage.</em></h2>
+      <span class="section-eyebrow">Who We Serve</span>
+      <h2>Medical staffing across <span>multiple industries</span></h2>
+      <p>Though our expertise began in film and television, we now serve a wide range of environments where professional medical staffing is critical.</p>
     </div>
-    <div class="news-grid">
-      <a href="https://www.cbc.ca/news/entertainment/pulsar-uv-film-testing-1.6034813" target="_blank" class="news-card">
-        <div class="news-img"><img src="images/news-1.jpg" alt=""/></div>
-        <div class="news-body">
-          <div class="news-tag">CBC News</div>
-          <h3>This company is helping Canada's film industry beat records &mdash; despite the pandemic</h3>
-          <span class="news-link">Read Article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+    <div class="industries-grid">
+      <div class="industry-card featured">
+        <div>
+          <span class="industry-badge">Our Specialty</span>
+          <h3>Film &amp; Television Productions</h3>
+          <p>18 years of combined experience on Canadian film sets. We know how production works because we come from the industry. From feature films to limited series, our medics integrate seamlessly with your production team without disrupting the flow.</p>
         </div>
-      </a>
-      <a href="https://www.youtube.com/watch?v=KIxwl0mRdoc" target="_blank" class="news-card">
-        <div class="news-img"><img src="images/news-2.jpg" alt=""/></div>
-        <div class="news-body">
-          <div class="news-tag">Video Feature</div>
-          <h3>The company helping keep film sets safe during the pandemic</h3>
-          <span class="news-link">Watch Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>
+        <div class="industry-examples">
+          Feature films &nbsp;&bull;&nbsp; Television series &nbsp;&bull;&nbsp; Streaming productions<br>
+          Commercials &nbsp;&bull;&nbsp; Music videos &nbsp;&bull;&nbsp; Documentaries
         </div>
-      </a>
-      <a href="https://ca.news.yahoo.com/covid-19-testing-film-tv-142050414.html" target="_blank" class="news-card">
-        <div class="news-img"><img src="images/news-3.jpg" alt=""/></div>
-        <div class="news-body">
-          <div class="news-tag">Yahoo News</div>
-          <h3>COVID-19 testing for film, TV productions done by company founded by Windsorites</h3>
-          <span class="news-link">Read Article <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-        </div>
-      </a>
+      </div>
+      <div class="industry-card">
+        <h3>Live Events &amp; Concerts</h3>
+        <p>Medical coverage for festivals, concerts, and public gatherings of any size.</p>
+        <div class="industry-examples">Music festivals<br>Sports events<br>Public gatherings</div>
+      </div>
+      <div class="industry-card">
+        <h3>Corporate Events</h3>
+        <p>Professional medical staffing for corporate functions and conferences.</p>
+        <div class="industry-examples">Conferences<br>Galas &amp; fundraisers<br>Product launches</div>
+      </div>
+      <div class="industry-card">
+        <h3>Workplace Health</h3>
+        <p>Ongoing medical coverage for industrial and corporate environments.</p>
+        <div class="industry-examples">Industrial sites<br>Studio complexes<br>Corporate campuses</div>
+      </div>
+      <div class="industry-card">
+        <h3>Medical Consulting</h3>
+        <p>Clinical advisory and compliance support for any environment.</p>
+        <div class="industry-examples">Safety planning<br>Compliance audits<br>Risk assessment</div>
+      </div>
     </div>
-    <div style="text-align:center;margin-top:50px">
-      <a href="news.html" class="btn-secondary">View All News</a>
-    </div>
-  </div>
-</section>
-
-<!-- Partners -->
-<section class="partners">
-  <div class="partners-head">Trusted by Productions Across Ontario</div>
-  <div class="partners-grid">
-    <div class="partner-logo">Logo 01</div>
-    <div class="partner-logo">Logo 02</div>
-    <div class="partner-logo">Logo 03</div>
-    <div class="partner-logo">Logo 04</div>
-    <div class="partner-logo">Logo 05</div>
-    <div class="partner-logo">Logo 06</div>
-  </div>
-</section>
-
-<!-- Areas -->
-<section class="areas">
-  <h3>Areas We Serve Across Ontario</h3>
-  <div class="areas-grid">
-    <a href="#" class="area">Toronto</a>
-    <a href="#" class="area">Ottawa</a>
-    <a href="#" class="area">Kingston</a>
-    <a href="#" class="area">London</a>
-    <a href="#" class="area">North Bay</a>
-    <a href="#" class="area">Sudbury</a>
-    <a href="#" class="area">Mississauga</a>
-    <a href="#" class="area">Brampton</a>
-    <a href="#" class="area">Vaughan</a>
-    <a href="#" class="area">Markham</a>
-    <a href="#" class="area">Hamilton</a>
-    <a href="#" class="area">Kitchener</a>
-    <a href="#" class="area">Waterloo</a>
-    <a href="#" class="area">Niagara Falls</a>
-    <a href="#" class="area">Barrie</a>
-    <a href="#" class="area">Thunder Bay</a>
-    <a href="#" class="area">Sault Ste. Marie</a>
-    <a href="#" class="area">Peterborough</a>
   </div>
 </section>
 
 <!-- CTA -->
-<section class="cta-banner">
+<section class="cta">
   <div class="cta-inner">
-    <div class="eyebrow" style="justify-content:center;color:var(--pulse)">Get Started</div>
-    <h2>Ready to book <em>a medic?</em></h2>
-    <p>Whether it's a pilot, a feature, a festival, or a one-day shoot &mdash; we're available 24/7 and we're fast to respond.</p>
+    <h2>Ready to discuss your medical staffing needs?</h2>
+    <p>Whether you're planning a production, organizing an event, or need ongoing workplace coverage, our team is ready to help. Get in touch and we'll respond within one business hour.</p>
     <div class="cta-actions">
-      <a href="tel:+16476968800" class="btn-pulse">Call (647) 696-8800 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
-      <a href="contact.html" class="btn-ghost">Contact Form</a>
+      <a href="contact.html" class="btn-white">
+        Request Staffing
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="tel:+16476968800" class="btn-outline-white">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        Call (647) 696-8800
+      </a>
     </div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <a href="index.html" class="logo"><img src="images/logo.png" alt="Pulsar Medical"/></a>
-      <p>Set-savvy medical professionals for film, TV, and live events across Ontario. 18 years of industry experience.</p>
-      <div class="footer-social">
-        <a href="https://www.instagram.com/pulsarfilmsolutions" target="_blank" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo">
+          <div class="logo-mark">P</div>
+          <div class="logo-text">
+            Pulsar Medical
+            <span>Professional Medical Staffing</span>
+          </div>
         </a>
-        <a href="https://www.linkedin.com/company/pulsaruv/" target="_blank" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-        </a>
-        <a href="https://www.facebook.com/share/1CPwoWj11r/" target="_blank" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-        </a>
+        <p>Licensed medical professionals for film &amp; TV productions, live events, and workplace environments across Ontario.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/pulsarfilmsolutions" target="_blank" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/pulsaruv/" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+          <a href="https://www.facebook.com/share/1CPwoWj11r/" target="_blank" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Film &amp; TV Medics</a></li>
+          <li><a href="services.html">Event Medics</a></li>
+          <li><a href="services.html">Workplace Support</a></li>
+          <li><a href="services.html">Physician Oversight</a></li>
+          <li><a href="services.html">Medical Consulting</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="news.html">News &amp; Press</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Request Staffing</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+16476968800">(647) 696-8800</a>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <a href="mailto:info@pulsarmedic.com">info@pulsarmedic.com</a>
+        </div>
+        <div class="contact-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Ontario, Canada
+        </div>
       </div>
     </div>
-    <div class="footer-col">
-      <h4>Services</h4>
-      <ul>
-        <li><a href="services.html">Film &amp; TV Medics</a></li>
-        <li><a href="services.html">Workplace &amp; Events</a></li>
-        <li><a href="services.html">Medical Consulting</a></li>
-        <li><a href="services.html">Physician Oversight</a></li>
-      </ul>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Pulsar Medical. All rights reserved.</div>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Accessibility</a>
+      </div>
     </div>
-    <div class="footer-col">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="news.html">News &amp; Press</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-    <div class="footer-col">
-      <h4>Contact</h4>
-      <ul>
-        <li><a href="tel:+16476968800">(647) 696-8800</a></li>
-        <li><a href="mailto:info@pulsarmedic.com">info@pulsarmedic.com</a></li>
-        <li>Ontario, Canada</li>
-      </ul>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div>&copy; 2026 Pulsar Medical. All rights reserved.</div>
-    <div>Licensed &bull; Insured &bull; WSIB-Covered</div>
   </div>
 </footer>
 

@@ -3,251 +3,317 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Services | Pulsar Medical</title>
-<meta name="description" content="Set medics, medical consulting, event medics, and workplace medical services. Licensed, insured, and built for the pace of production."/>
-<meta name="keywords" content="set medic services, film medic, event medical, workplace medics Ontario, medical consulting film"/>
-<link rel="canonical" href="https://pulsarmedic.com/services.html"/>
-
+<title>Services | Pulsar Medical — Professional Medical Staffing</title>
+<meta name="description" content="Complete medical staffing services for film &amp; TV productions, live events, workplace environments, and medical consulting across Ontario."/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Fraunces:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="shared.css"/>
-
 <style>
-/* Services-specific styles */
-.services-list{display:grid;gap:0;max-width:1080px;margin:0 auto}
-.service-row{display:grid;grid-template-columns:.8fr 1.5fr 1fr;gap:60px;padding:60px 0;border-top:1px solid var(--line);align-items:start}
-.service-row:last-child{border-bottom:1px solid var(--line)}
-.service-row .num{font-family:'Fraunces',serif;font-style:italic;color:var(--pulse);font-size:1rem;letter-spacing:.1em}
-.service-row h3{font-family:'Fraunces',serif;font-weight:500;font-size:2rem;line-height:1.1;letter-spacing:-.01em;margin-bottom:16px}
-.service-row p{color:var(--muted);font-size:1rem;line-height:1.7;margin-bottom:20px}
-.service-row ul{list-style:none}
-.service-row ul li{padding:10px 0;border-bottom:1px solid var(--line);font-size:.92rem;display:flex;gap:12px}
-.service-row ul li::before{content:'→';color:var(--pulse);font-weight:600}
-.service-row ul li:last-child{border-bottom:none}
+.service-block{padding:100px 24px;border-bottom:1px solid var(--gray-200)}
+.service-block:nth-child(even){background:var(--gray-50)}
+.service-block-grid{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:80px;align-items:center}
+.service-block-grid.reverse{grid-template-columns:1.1fr 1fr}
+.service-block-grid.reverse .service-block-image{order:2}
+.service-block-image{aspect-ratio:4/3;background:var(--navy);border-radius:var(--radius-lg);overflow:hidden;position:relative;box-shadow:0 20px 60px rgba(10,37,64,.15)}
+.service-block-image img{width:100%;height:100%;object-fit:cover}
+.service-block-image .badge{position:absolute;top:20px;left:20px;padding:8px 16px;background:var(--white);border-radius:100px;font-size:12px;font-weight:700;color:var(--navy);box-shadow:0 4px 12px rgba(0,0,0,.1)}
+.service-block-content .service-eyebrow{display:inline-block;padding:6px 14px;background:var(--blue-soft);color:var(--blue);border-radius:100px;font-size:13px;font-weight:700;margin-bottom:16px}
+.service-block-content h2{font-size:clamp(1.8rem,3vw,2.4rem);font-weight:800;color:var(--navy);line-height:1.15;letter-spacing:-.02em;margin-bottom:20px}
+.service-block-content h2 span{color:var(--blue)}
+.service-block-content>p{color:var(--text-muted);font-size:1.1rem;line-height:1.65;margin-bottom:28px}
+.service-features-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:28px}
+.service-feature{display:flex;gap:12px;padding:16px;background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius)}
+.service-block:nth-child(even) .service-feature{background:var(--white)}
+.service-feature-check{width:20px;height:20px;border-radius:50%;background:var(--blue-soft);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px}
+.service-feature-check svg{width:12px;height:12px;color:var(--blue)}
+.service-feature strong{display:block;font-size:14px;font-weight:700;color:var(--navy);margin-bottom:2px}
+.service-feature span{font-size:13px;color:var(--text-muted);line-height:1.4}
 
-.divisions{background:var(--bone)}
-.division-tabs{display:flex;justify-content:center;gap:8px;margin-bottom:60px;flex-wrap:wrap}
-.division-tab{padding:14px 28px;background:var(--paper);border:1px solid var(--line);border-radius:2px;font-size:.88rem;font-weight:600;letter-spacing:.05em;transition:all .2s}
-.division-tab.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-.division-tab:hover:not(.active){border-color:var(--pulse);color:var(--pulse)}
+.process{background:var(--white)}
+.process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;position:relative}
+.process-steps::before{content:'';position:absolute;top:30px;left:10%;right:10%;height:2px;background:var(--gray-200);z-index:0}
+.process-step{position:relative;z-index:1;text-align:center}
+.process-num{width:60px;height:60px;background:var(--blue);color:var(--white);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;font-size:22px;font-weight:800;box-shadow:0 0 0 6px var(--white),0 4px 12px rgba(37,99,235,.2)}
+.process-step h3{font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:10px}
+.process-step p{color:var(--text-muted);font-size:14px;line-height:1.5}
 
-.division-card{background:var(--paper);border:1px solid var(--line);border-radius:2px;padding:60px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1100px;margin:0 auto}
-.division-card h3{font-family:'Fraunces',serif;font-weight:500;font-size:2.4rem;line-height:1.1;margin-bottom:20px}
-.division-card h3 em{font-style:italic;color:var(--pulse)}
-.division-card p{color:var(--muted);font-size:1.02rem;line-height:1.7;margin-bottom:28px}
-.division-features{list-style:none}
-.division-features li{padding:14px 0;border-bottom:1px solid var(--line);font-size:.95rem;display:flex;align-items:flex-start;gap:14px}
-.division-features li:last-child{border-bottom:none}
-.division-features li::before{content:'';width:6px;height:6px;background:var(--pulse);border-radius:50%;flex-shrink:0;margin-top:8px}
-.division-img{aspect-ratio:4/5;background:var(--ink-2);border-radius:2px;overflow:hidden}
-.division-img img{width:100%;height:100%;object-fit:cover}
+.additional{background:var(--gray-50);border-top:1px solid var(--gray-200)}
+.additional-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.add-card{background:var(--white);border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:32px 28px;text-align:center;transition:all .2s}
+.add-card:hover{border-color:var(--blue);transform:translateY(-4px);box-shadow:0 20px 40px rgba(10,37,64,.08)}
+.add-card-icon{width:56px;height:56px;background:var(--blue-soft);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.add-card-icon svg{width:28px;height:28px;color:var(--blue)}
+.add-card h3{font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:10px}
+.add-card p{color:var(--text-muted);font-size:14px;line-height:1.55}
 
 @media(max-width:900px){
-  .service-row{grid-template-columns:1fr;gap:20px}
-  .division-card{grid-template-columns:1fr;padding:32px;gap:32px}
+  .service-block-grid,.service-block-grid.reverse{grid-template-columns:1fr;gap:40px}
+  .service-block-grid.reverse .service-block-image{order:0}
+  .service-features-grid{grid-template-columns:1fr}
+  .process-steps{grid-template-columns:1fr 1fr;gap:32px}
+  .process-steps::before{display:none}
+  .additional-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .process-steps{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
 
-<div class="announce">24/7 response &bull; Licensed physician oversight &bull; <strong>Call (647) 696-8800</strong></div>
-
-<nav>
-  <a href="index.html" class="logo"><img src="images/logo.png" alt="Pulsar Medical"/></a>
-  <div class="nav-center">
-    <a href="index.html">Home</a>
-    <a href="services.html" class="active">Services</a>
-    <a href="news.html">News</a>
-    <a href="about.html">About Us</a>
+<div class="top-bar">
+  <div class="top-bar-inner">
+    <div class="top-bar-left">
+      <span class="top-bar-item"><span class="status-dot"></span>24/7 Availability</span>
+      <span class="top-bar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg>Fully Licensed &amp; Insured</span>
+      <span class="top-bar-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Serving all of Ontario</span>
+    </div>
+    <div class="top-bar-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <a href="tel:+16476968800">(647) 696-8800</a>
+    </div>
   </div>
-  <a href="contact.html" class="nav-cta">Contact Us</a>
-  <button class="hamburger" onclick="document.querySelector('.nav-center').classList.toggle('open')"><span></span><span></span><span></span></button>
-</nav>
+</div>
+
+<header>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">
+      <div class="logo-mark">P</div>
+      <div class="logo-text">Pulsar Medical<span>Professional Medical Staffing</span></div>
+    </a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="about.html">About</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta-group">
+      <a href="tel:+16476968800" class="btn-phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(647) 696-8800</a>
+      <a href="contact.html" class="btn-primary">Request Staffing<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
 
 <section class="page-hero">
+  <div class="page-hero-bg"></div>
   <div class="page-hero-inner">
-    <div class="breadcrumb"><a href="index.html">Home</a> &mdash; Services</div>
-    <div class="eyebrow">What We Do</div>
-    <h1>Medical expertise built for <em>production and performance.</em></h1>
-    <p>From feature films to festivals, we provide certified medical professionals, specialty extras, and consulting services that keep productions running safely and on schedule.</p>
+    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span>Services</div>
+    <div class="badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg>
+      Complete Service Portfolio
+    </div>
+    <h1>Medical staffing services for <span>every environment</span></h1>
+    <p>From on-set medical support to long-term workplace coverage, we deliver licensed medical professionals backed by physician oversight and fully-stocked response equipment.</p>
   </div>
 </section>
 
-<!-- Divisions -->
-<section class="divisions">
-  <div class="container">
-    <div class="section-head center">
-      <div class="eyebrow">Our Divisions</div>
-      <h2>Two focused <em>divisions.</em></h2>
-      <p>Each with deep industry expertise and the same uncompromising standard of care.</p>
+<!-- SERVICE BLOCK 1: Film & TV -->
+<div class="service-block">
+  <div class="service-block-grid">
+    <div class="service-block-image">
+      <img src="images/service-film.jpg" alt="Film &amp; TV Set Medic"/>
+      <div class="badge">Core Specialty</div>
     </div>
-
-    <div class="division-card" style="margin-bottom:32px">
-      <div>
-        <div class="eyebrow">Division 01</div>
-        <h3>Film &amp; <em>TV Productions</em></h3>
-        <p>Pulsar Medical is a trusted provider of experienced set medics for film and television productions. With 18 years of industry film experience, we understand the unique pace and demands of production environments.</p>
-        <p>Since 2020, we've delivered reliable, professional on-site medical support that ensures immediate care when it's needed most and helps productions remain compliant with health and safety regulations.</p>
-        <ul class="division-features">
-          <li>Licensed physician oversight on every production</li>
-          <li>Set-savvy medics who understand production flow</li>
-          <li>Specialized medical consultants on call</li>
-          <li>Full compliance with health &amp; safety regulations</li>
-          <li>Fully-stocked medical kits (AED, EpiPen, Narcan)</li>
-          <li>24/7 availability, including last-minute bookings</li>
-        </ul>
+    <div class="service-block-content">
+      <span class="service-eyebrow">Service 01</span>
+      <h2>Film &amp; TV <span>Set Medics</span></h2>
+      <p>Our foundational service. Certified medical professionals with 18 years of combined on-set experience across Canadian film and television productions. We integrate seamlessly with your production team, understand the pace of a working set, and stay invisible until we're essential.</p>
+      <div class="service-features-grid">
+        <div class="service-feature">
+          <div class="service-feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><strong>Set-Savvy Medics</strong><span>Experienced in production environments</span></div>
+        </div>
+        <div class="service-feature">
+          <div class="service-feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><strong>Multi-Unit Coverage</strong><span>Scalable teams for larger productions</span></div>
+        </div>
+        <div class="service-feature">
+          <div class="service-feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><strong>Night &amp; Overnight</strong><span>Shoot-friendly hours around the clock</span></div>
+        </div>
+        <div class="service-feature">
+          <div class="service-feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><strong>Remote Locations</strong><span>Coverage anywhere in Ontario</span></div>
+        </div>
       </div>
-      <div class="division-img"><img src="images/services-film.jpg" alt="Film set medic"/></div>
+      <a href="contact.html" class="btn-primary">Request a Set Medic<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
     </div>
+  </div>
+</div>
 
-    <div class="division-card">
-      <div class="division-img"><img src="images/services-events.jpg" alt="Event medic"/></div>
-      <div>
-        <div class="eyebrow">Division 02</div>
-        <h3>Workplace &amp; <em>Events</em></h3>
-        <p>Pulsar Medical provides professional on-site medics for concerts, festivals, corporate events, and workplace needs. We ensure the safety and well-being of attendees, performers, and crew in every environment.</p>
-        <p>Whether it's a music festival, a corporate function, or ongoing workplace medical support, our team brings the same level of preparation and responsiveness that productions rely on.</p>
-        <ul class="division-features">
-          <li>Event &amp; concert medical teams</li>
-          <li>Festival and crowd response specialists</li>
-          <li>Corporate workplace medical support</li>
-          <li>Medical consulting and safety planning</li>
-          <li>Scalable team sizes for any event</li>
-          <li>Full WSIB and insurance coverage</li>
-        </ul>
+<!-- SERVICE BLOCK 2: Events -->
+<div class="service-block">
+  <div class="service-block-grid reverse">
+    <div class="service-block-image">
+      <img src="images/service-events.jpg" alt="Event Medics"/>
+    </div>
+    <div class="service-block-content">
+      <span class="service-eyebrow">Service 02</span>
+      <h2>Live Event &amp; <span>Concert Medics</span></h2>
+      <p>Scalable medical coverage for festivals, concerts, corporate events, and public gatherings. From a single standby medic to a full multi-team operation — we handle events of every size with the same rigor and preparation.</p>
+      <div class="service-features-grid">
+        <div class="service-feature">
+          <div class="service-feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><strong>Music Festivals</strong><span>Crowd response specialists</span></div>
+        </div>
+        <div class="service-feature">
+          <div class="service-feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><strong>Corporate Events</strong><span>Conferences, galas, launches</span></div>
+        </div>
+        <div class="service-feature">
+          <div class="service-feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><strong>Sports &amp; Recreation</strong><span>On-site response teams</span></div>
+        </div>
+        <div class="service-feature">
+          <div class="service-feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><strong>Public Gatherings</strong><span>Scalable to crowd size</span></div>
+        </div>
+      </div>
+      <a href="contact.html" class="btn-primary">Book Event Coverage<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE BLOCK 3: Workplace -->
+<div class="service-block">
+  <div class="service-block-grid">
+    <div class="service-block-image">
+      <img src="images/service-workplace.jpg" alt="Workplace Medical Support"/>
+    </div>
+    <div class="service-block-content">
+      <span class="service-eyebrow">Service 03</span>
+      <h2>Workplace <span>Medical Support</span></h2>
+      <p>Ongoing or project-based medical coverage for industrial sites, studio complexes, and long-running productions. We provide continuous occupational health support with the documentation and compliance your operations require.</p>
+      <div class="service-features-grid">
+        <div class="service-feature">
+          <div class="service-feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><strong>Industrial Sites</strong><span>Heavy-industry coverage</span></div>
+        </div>
+        <div class="service-feature">
+          <div class="service-feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><strong>Studio Complexes</strong><span>Continuous studio coverage</span></div>
+        </div>
+        <div class="service-feature">
+          <div class="service-feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><strong>Stunt Productions</strong><span>High-risk sequence support</span></div>
+        </div>
+        <div class="service-feature">
+          <div class="service-feature-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><strong>Documentation</strong><span>Full compliance reporting</span></div>
+        </div>
+      </div>
+      <a href="contact.html" class="btn-primary">Discuss Workplace Coverage<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</div>
+
+<!-- ADDITIONAL SERVICES -->
+<section class="additional">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">Additional Services</span>
+      <h2>Specialized <span>medical expertise</span></h2>
+      <p>Beyond standard staffing, we provide specialized medical services built around the unique needs of production and event environments.</p>
+    </div>
+    <div class="additional-grid">
+      <div class="add-card">
+        <div class="add-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="23"/></svg>
+        </div>
+        <h3>Physician Oversight</h3>
+        <p>Every engagement operates under licensed physician direction, with protocol review and specialist access.</p>
+      </div>
+      <div class="add-card">
+        <div class="add-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h3>Medical Consulting</h3>
+        <p>Pre-production planning, compliance review, risk assessment, and medical accuracy advisory for scripts and scenes.</p>
+      </div>
+      <div class="add-card">
+        <div class="add-card-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3>Specialty Medical Extras</h3>
+        <p>Real certified medics for on-camera medical roles, hospital scenes, and emergency sequences.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Detailed services list -->
-<section>
+<!-- PROCESS -->
+<section class="process">
   <div class="container">
-    <div class="section-head center">
-      <div class="eyebrow">Full Scope</div>
-      <h2>Every service <em>we offer.</em></h2>
+    <div class="section-head">
+      <span class="section-eyebrow">Our Process</span>
+      <h2>Simple, fast, <span>professional</span></h2>
+      <p>From initial request to on-site deployment, our process is built around your timeline.</p>
     </div>
-
-    <div class="services-list">
-      <div class="service-row">
-        <div class="num">— 01</div>
-        <div>
-          <h3>Set Medics</h3>
-          <p>Certified medical first responders with first-hand film &amp; TV experience. We blend seamlessly into the production environment without disrupting flow.</p>
-        </div>
-        <ul>
-          <li>Day rate or full production</li>
-          <li>Multi-unit coverage available</li>
-          <li>Night shoots &amp; overnight</li>
-          <li>Remote location shoots</li>
-        </ul>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="process-num">1</div>
+        <h3>Request</h3>
+        <p>Tell us about your project, dates, and coverage needs. Takes 2 minutes.</p>
       </div>
-
-      <div class="service-row">
-        <div class="num">— 02</div>
-        <div>
-          <h3>Physician Oversight</h3>
-          <p>Every team operates under the supervision of a licensed physician. Escalation and specialist access when cases go beyond standard first response.</p>
-        </div>
-        <ul>
-          <li>Medical direction</li>
-          <li>Protocol review</li>
-          <li>Specialist referrals</li>
-          <li>Case documentation</li>
-        </ul>
+      <div class="process-step">
+        <div class="process-num">2</div>
+        <h3>Consultation</h3>
+        <p>We review your specific requirements and propose the right team and setup.</p>
       </div>
-
-      <div class="service-row">
-        <div class="num">— 03</div>
-        <div>
-          <h3>Medical Consulting</h3>
-          <p>Pre-production medical planning, compliance review, and location-specific risk assessment. Technical advisory for medical accuracy in scripts and scenes.</p>
-        </div>
-        <ul>
-          <li>Health &amp; safety planning</li>
-          <li>Production risk assessment</li>
-          <li>Script medical accuracy</li>
-          <li>Scene technical advisory</li>
-        </ul>
+      <div class="process-step">
+        <div class="process-num">3</div>
+        <h3>Deployment</h3>
+        <p>Certified medics arrive on-site, fully equipped, ahead of schedule.</p>
       </div>
-
-      <div class="service-row">
-        <div class="num">— 04</div>
-        <div>
-          <h3>Specialty Extras</h3>
-          <p>Need authentic medical personnel for a hospital scene or emergency sequence? We provide actual certified medics for on-camera background and non-speaking roles.</p>
-        </div>
-        <ul>
-          <li>Background medical personnel</li>
-          <li>Hospital scene extras</li>
-          <li>Emergency sequence coordination</li>
-          <li>Wardrobe &amp; gear accurate</li>
-        </ul>
-      </div>
-
-      <div class="service-row">
-        <div class="num">— 05</div>
-        <div>
-          <h3>Event &amp; Festival Medics</h3>
-          <p>Scalable medical coverage for concerts, festivals, corporate events, and public gatherings. From single medic to full response team.</p>
-        </div>
-        <ul>
-          <li>Concerts &amp; festivals</li>
-          <li>Corporate events</li>
-          <li>Film premieres &amp; junkets</li>
-          <li>Convention &amp; trade shows</li>
-        </ul>
-      </div>
-
-      <div class="service-row">
-        <div class="num">— 06</div>
-        <div>
-          <h3>Workplace Medical Support</h3>
-          <p>Ongoing or project-based medical support for workplaces, including industrial sets, stunt-heavy productions, and long-running studio shoots.</p>
-        </div>
-        <ul>
-          <li>Ongoing workplace coverage</li>
-          <li>Stunt-heavy productions</li>
-          <li>Industrial set support</li>
-          <li>Compliance documentation</li>
-        </ul>
+      <div class="process-step">
+        <div class="process-num">4</div>
+        <h3>Support</h3>
+        <p>Continuous coverage with 24/7 access to physician oversight.</p>
       </div>
     </div>
   </div>
 </section>
 
 <!-- CTA -->
-<section class="cta-banner">
+<section class="cta">
   <div class="cta-inner">
-    <div class="eyebrow" style="justify-content:center;color:var(--pulse)">Get Started</div>
-    <h2>Have a production <em>or event coming up?</em></h2>
-    <p>We're available 24/7. Tell us about your dates, locations, and coverage needs and we'll get back to you fast.</p>
+    <h2>Need medical staffing for your next project?</h2>
+    <p>Tell us what you need and we'll respond within one business hour. For urgent bookings, call us directly.</p>
     <div class="cta-actions">
-      <a href="tel:+16476968800" class="btn-pulse">Call (647) 696-8800</a>
-      <a href="contact.html" class="btn-ghost">Request a Quote</a>
+      <a href="contact.html" class="btn-white">Request Staffing<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+      <a href="tel:+16476968800" class="btn-outline-white"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call (647) 696-8800</a>
     </div>
   </div>
 </section>
 
 <footer>
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <a href="index.html" class="logo"><img src="images/logo.png" alt="Pulsar Medical"/></a>
-      <p>Set-savvy medical professionals for film, TV, and live events across Ontario. 18 years of industry experience.</p>
-      <div class="footer-social">
-        <a href="https://www.instagram.com/pulsarfilmsolutions" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-        <a href="https://www.linkedin.com/company/pulsaruv/" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
-        <a href="https://www.facebook.com/share/1CPwoWj11r/" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo"><div class="logo-mark">P</div><div class="logo-text">Pulsar Medical<span>Professional Medical Staffing</span></div></a>
+        <p>Licensed medical professionals for film &amp; TV productions, live events, and workplace environments across Ontario.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/pulsarfilmsolutions" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="https://www.linkedin.com/company/pulsaruv/" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          <a href="https://www.facebook.com/share/1CPwoWj11r/" target="_blank" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Film &amp; TV Medics</a></li><li><a href="services.html">Event Medics</a></li><li><a href="services.html">Workplace Support</a></li><li><a href="services.html">Physician Oversight</a></li><li><a href="services.html">Medical Consulting</a></li></ul></div>
+      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="news.html">News &amp; Press</a></li><li><a href="contact.html">Contact</a></li><li><a href="contact.html">Request Staffing</a></li></ul></div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <div class="contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg><a href="tel:+16476968800">(647) 696-8800</a></div>
+        <div class="contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:info@pulsarmedic.com">info@pulsarmedic.com</a></div>
+        <div class="contact-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Ontario, Canada</div>
       </div>
     </div>
-    <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Film &amp; TV Medics</a></li><li><a href="services.html">Workplace &amp; Events</a></li><li><a href="services.html">Medical Consulting</a></li><li><a href="services.html">Physician Oversight</a></li></ul></div>
-    <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About Us</a></li><li><a href="news.html">News &amp; Press</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-    <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:+16476968800">(647) 696-8800</a></li><li><a href="mailto:info@pulsarmedic.com">info@pulsarmedic.com</a></li><li>Ontario, Canada</li></ul></div>
-  </div>
-  <div class="footer-bottom">
-    <div>&copy; 2026 Pulsar Medical. All rights reserved.</div>
-    <div>Licensed &bull; Insured &bull; WSIB-Covered</div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Pulsar Medical. All rights reserved.</div>
+      <div class="footer-legal"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a><a href="#">Accessibility</a></div>
+    </div>
   </div>
 </footer>
 
